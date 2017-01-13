@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Name: Boilerplate
+Version: v1.3
+Last Updated: 4/24/2013
+Author: George Hadley
+License: Released for free under a Creative Commons Attribution 2.5 License
+
+This website was based upon a number of source materials, which are elaborated upon in credits.txt
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!-- Python SimpleHTTPServer Testing -->
+<!--<base href="/http://localhost:8000/" />-->
+<!-- ECE477 preview URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/preview/" />-->
+<!-- ECE477 final URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/" />-->
+
+<!--Content-->
+<title>ECE477 Homepage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="Brian Rieder, Jen Isaza, Austin Peterson, Cole Giannotti">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="/default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+		<!-- Instantiate global site header.-->
+		<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+		<!-- Instantiate slideshow module. All slideshow images should be 1100px x 500px and stored in ./img/slideshow-->
+		<div id="slideshow"></div>
+		<!-- Instantiate main page content. All page content should be added to about.html -->
+		<div id="content">
+            <h2>Project Overview:</h2> 
+
+            <div>
+	            Guitar is one of the most common instruments people try to pick up and learn, but if you
+				have never played an instrument before, this could be a difficult feat to accomplish. Lessons may
+				be too expensive, or maybe you are taking lessons but want to improve your practicing efficiency
+				to show your teacher that you can move on to harder songs. One of the unique parts about
+				learning guitar compared to other instruments are the chords and strumming combination.
+				Tablature, or tabs, was created to be an alternative to learning how to play a song without
+				learning how to read sheet music. While tabs are easy to find, guitar sheet music is usually not
+				made and strumming patterns aren’t connected with the tabs. In order to learn the combination of
+				notes and strumming, users have to listen to a song over and over or find an instructional video
+				on YouTube.
+			</div>
+			&nbsp;
+			<div>
+				As the process of learning to play any instrument is difficult, our goal is to simplify this
+				ordeal for someone trying to learn to play the guitar. To simplify the learning process, we have
+				chosen to create Guitutar, a tutoring device that is implemented in the neck of an electric guitar.
+				The custom fretboard will help its user learn songs and scales by lighting up fingerings on the
+				correct frets, recognize correct chord and note inputs.
+			</div>
+            
+            <h2>Project Specific Success Criteria:</h2>
+                <ol>
+                    <li>PSSC #1: An ability to interact with the system through an external user interface such as a phone or remote.</li>
+                    <li>PSSC #2: An ability to interace the microcontroller with an external device via Bluetooth.</li>
+                    <li>PSSC #3: An ability to recognize and process pitches played by a user through a sensing interface.</li>
+                    <li>PSSC #4: An ability to display chords and notes on an LED array on the guitar neck.</li>
+                    <li>PSSC #5: An ability to have the microcontroller support two modes for user learning and full playback.</li>
+                </ol>
+        </div>
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+	</div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#slideshow").load("slideshow.html");
+	//$("#content").load("about.html");
+	$("#footer").load("footer.html");
+});
+</script>
+
+</body>
+</html>
