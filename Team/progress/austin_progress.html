@@ -51,21 +51,49 @@ contact course staff.
 			and include things such as a file lister (for listing out homework assignments or tutorials)
 		-->
 		<div id="content">
-            <h2>Progress Report for -insert student name here-</h2>
+            <h2>Progress Report for Austin Peterson</h2>
             
             <h4>Week 1:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
+            <b>Date:</b> 13 January 2017<br>
+            <b>Total hours:</b> 5<br>
             <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
+            For the first week, I worked on finding my guitar that we would be using for the project. I also worked on installing Eagle onto my computer to prepare and brush up on my Eagle experience. During this week, I worked on writing up the Final Project Proposal as well as researching in my own time different components that we would want to implement in the design of Guitutar. The result was that it would be best to either use surface mounted LEDs or discrete LEDs.
+            <br> <br>
+            <div align="center">
+            	<img width="10%" src="Team/progress/img/AustinImg/smd_led.png">
+            	<img width="10%" src="Team/progress/img/AustinImg/discrete_led.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+            The surface mount LEDs will allow us to have a smaller profile when we add the LEDs to the guitar neck. The discrete LEDs would be small enough in diameter that we would be able to fit six in a row. I learned that there is a lot of preplanning involved when designing devices with multiple components. There also needs to be extensive research and property checking to verify that the parts are good for the product. The next step would be to develop the functional specification of the project and realize any constraints that we may run into during the project.
+            <br>
 
             <br>
 
             <h4>Week 2:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
+            <b>Date:</b> 20 January 2017<br>
+            <b>Total hours:</b> 12<br>
             <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
+            Most of the time for week 2 was spent on finishing the functional specification of the project. For the functional specification, I researched more into the electrical components that would go on the PCB (microcontroller, Bluetooth capability, LEDs, etc.) and got the measurements for the guitar neck. A lot of researching on the internet was done to determine what microcontroller would be the best to use for our project. It seems like a STM32F030C6 would work for us, but we need to make sure it is compatible with Bluetooth and USB. I also looked more into using strip LEDs for the neck. Strip LEDs would be nice to use, but there is the issue that we need the LEDs to be evenly spaced for the guitar neck and it cannot be too thick. Measuring the guitar was a necessary task as it helps the team better understand how much room we have to work with when planning out the device and designing the PCB. My guitar’s measurements are:
+            </br> <br>
+			<div align="center">
+            	<img style="float: center;" width="70%" src="Team/progress/img/AustinImg/guitar_measurements.png"> 
+            	<p style="clear: both;">
+            </div>
+            <br>
+            With these measurements, I learned that modularizing the PCBs might be a bit more difficult because the measurements of the PCB would change depending on their placement on the neck.
+            <br> <br>
+            A lot of work in improving our design was also done during this week. Instead of going with signal processing of the guitar to determine what note/chord was played, we will be going with turning the strings and frets of the guitar neck into a switch matrix. Building this is new to me so I did some reading as to how it could be done. It sounds like we would have to power the strings and make the string and fret contact into a type of switch that would complete the circuit and indicate a note pressed to the microcontroller. This changes the project as we would not need a microcontroller with a lot of memory. The next step would be to build a prototype of the switch matrix using guitar strings and frets and interface them with LEDs. This prototype would then verify if our new design is viable for the final product. <br>
+            <div align="center">
+            	<!-- <img style="float: left;" width="48%" height="20%" src="Team/progress/img/AustinImg/switch_matrix.png"> -->
+            	<img style="float: left;" width="30%" src="Team/progress/img/AustinImg/switch_matrix.png">
+            	<img style="float: right;" width="48%" src="Team/progress/img/AustinImg/prototype_switch_matrix.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+
+            <br>
+
                       
         </div>
 	
