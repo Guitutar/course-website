@@ -51,21 +51,22 @@ contact course staff.
 			and include things such as a file lister (for listing out homework assignments or tutorials)
 		-->
 		<div id="content">
-            <h2>Progress Report for -insert student name here-</h2>
+            <h2>Progress Report for Cole Giannotti</h2>
             
-            <h4>Week 1:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
+            <h4>Week 2:</h4>
+            <b>Date:</b> 20 Jan 2017<br>
+            <b>Total hours:</b> 4<br>
             <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
+            The primary focus for the team this week was planning and preparation. I spent my time working on the Final Project Proposal and Functional Specification documents with the team. Being the team member with the digital signal processing experience, I had very specific research that was best suited for me for the Function Specification. One of our Project Specific Success Criteria is the ability to properly detect if the user is playing the correct note. This will allow us to provide feedback that is necessary for learning. I did research on how this detection would be done. The initial thought was to apply digital signal processing on the sound signal, by putting sensors on the individual strings, adding a microphone to pick up the notes, or reading the existing signal (due to the fact that we are working with electric and not acoustic guitars) that is sent to an amplifier. The first option of using Fast Fourier Transform (FFT) was put into question after Prof. Meyers stated that it is likely to run into problems using an FFT to do pitch recognition. After that conversation, I researched additional options including Autocorrelation and Zero-Cross Detection. I ran some simulations using MATLAB, as it is a good rapid prototyping environment. After viewing the results, it was clear that if a Zero-Cross Detection algorithm were used, the signal would have to be processed at the individual string level. Processing multiple frequencies would cause the sinusoidal components to cross the x-axis (crossing y = 0) in a different period than either of the signals individually, causing large amounts of aliasing.<br> 
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/thumbnail_zerocross.png" class="rotate90"> 
+            </div><br>
+            The Digital Signal Processing concept was put on the back burner after a later conversation with the Lab Coordinator, George Hadley. He agreed with some of the worries I had about implementation of the pitch recognition system and offered an alternative that would stray away from Digital Signal Processing. The proposed idea is to detect contact with the guitar string and fret wires. This solution does not account for the sound of the guitar, meaning an out of tune guitar being played will inform the user that they are properly playing the song when in reality the motion of playing the song is correct while the sound being made is incorrect. I then worked with my team on ideas on how to detect the purposed contact. Pressure sensors, circuit closing, and capacitance sensors were all discussed collectively.
+            </br>
 
             <br>
 
-            <h4>Week 2:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
-            <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
+            
                       
         </div>
 	
