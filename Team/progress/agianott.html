@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, available online at https://engineering.purdue.edu/ece477/Course/Policies/policies.html
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<base href="https://engineering.purdue.edu/477grp12/" />
+
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Cole Giannotti</h2>
+            
+            <h4>Week 2:</h4>
+            <b>Date:</b> 20 Jan 2017<br>
+            <b>Total hours:</b> 4<br>
+            <b>Description of design efforts:</b><br>
+            The primary focus for the team this week was planning and preparation. I spent my time working on the Final Project Proposal and Functional Specification documents with the team. Being the team member with the digital signal processing experience, I had very specific research that was best suited for me for the Function Specification. One of our Project Specific Success Criteria is the ability to properly detect if the user is playing the correct note. This will allow us to provide feedback that is necessary for learning. I did research on how this detection would be done. The initial thought was to apply digital signal processing on the sound signal, by putting sensors on the individual strings, adding a microphone to pick up the notes, or reading the existing signal (due to the fact that we are working with electric and not acoustic guitars) that is sent to an amplifier. The first option of using Fast Fourier Transform (FFT) was put into question after Prof. Meyers stated that it is likely to run into problems using an FFT to do pitch recognition. After that conversation, I researched additional options including Autocorrelation and Zero-Cross Detection. I ran some simulations using MATLAB, as it is a good rapid prototyping environment. After viewing the results, it was clear that if a Zero-Cross Detection algorithm were used, the signal would have to be processed at the individual string level. Processing multiple frequencies would cause the sinusoidal components to cross the x-axis (crossing y = 0) in a different period than either of the signals individually, causing large amounts of aliasing.<br> 
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/thumbnail_zerocross.png" class="rotate90"> 
+            </div><br>
+            The Digital Signal Processing concept was put on the back burner after a later conversation with the Lab Coordinator, George Hadley. He agreed with some of the worries I had about implementation of the pitch recognition system and offered an alternative that would stray away from Digital Signal Processing. The proposed idea is to detect contact with the guitar string and fret wires. This solution does not account for the sound of the guitar, meaning an out of tune guitar being played will inform the user that they are properly playing the song when in reality the motion of playing the song is correct while the sound being made is incorrect. I then worked with my team on ideas on how to detect the purposed contact. Pressure sensors, circuit closing, and capacitance sensors were all discussed collectively.
+            </br>
+
+            <br>
+
+            <h4>Week 3:</h4>
+            <b>Date:</b> 27 Jan 2017<br>
+            <b>Total hours:</b> 9<br>
+            <b>Description of design efforts:</b><br>
+            After significant discussion with the ECE 477 course staff, the digital signal processing concept was officially revoked. With that said, we had the main hardware concepts layed out and removed a large level of complexityfrom the software requirements. Brian and I took the opportunity to lay out as much of the software as possible. The first issue to tackle was data management and encoding. I spent some time brainstorming ideas to present to the team. There were three main contenders for data encoding. The first was splitting the bits of one byte into two groups and assigning each group to designate either the string or fret respectively. This works perfectly because a 3/5 split on an 8 bit set allows for a comprehensive set of options for both strings and frets with zero wasted bits. The possible combinations were not exhaustive of the available range in a single byte which allows for specialty characters to be stored. The second option was an array of characters where each character would represent the fret for its given string based on position within the array. This method is very easy to read to the human eye but is not effecient on space saving or time to read. The final option was to create a binary search tree encoding for each string-fret combination and store songs as keys to the tree. This method would be very effecient to search for the data, however we found that it was redundant compared to the first idea because string and fret information would still have to be stored. Storing the string and fret information within each leaf would be most effeciently done by creating a 3/5 split on a single byte, which is identical to what was already proposed. A combination of the first and second option is what was decided by the team, with Brian and I having frequent discussions on the matter.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/thumbnail_zerocross.png" class="rotate90"> 
+            </div><br>
+            With the deadline of the software overview this week. I spent a lot of time building the framework for what the software and firmware would be doing. In order to better formulate my thoughts, I made a series of flowcharts that depicted various steps of code's process. After discussing the flowcharts with Brian, he developed a good state-machine diagram to even further convey the algorithms. I then created a formal version of his diagram and included it within the software overview. On top of all the tangable progress, I have put a great deal of thought on how the interfaces of the remote user controller should be set up. Were we to design a phone application, I have brainstormed some concepts of how it would be designed.
+            </br>
+
+            <br>
+            
+                      
+        </div>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>

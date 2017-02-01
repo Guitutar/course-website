@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, available online at https://engineering.purdue.edu/ece477/Course/Policies/policies.html
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<base href="https://engineering.purdue.edu/477grp12/" />
+
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Austin Peterson</h2>
+            
+            <h4>Week 1:</h4>
+            <b>Date:</b> 13 January 2017<br>
+            <b>Total hours:</b> 5<br>
+            <b>Description of design efforts:</b><br>
+            For the first week, I worked on finding my guitar that we would be using for the project. I also worked on installing Eagle onto my computer to prepare and brush up on my Eagle experience. During this week, I worked on writing up the Final Project Proposal as well as researching in my own time different components that we would want to implement in the design of Guitutar. The result was that it would be best to either use surface mounted LEDs or discrete LEDs.
+            <br> <br>
+            <div align="center">
+            	<img width="10%" src="Team/progress/img/AustinImg/smd_led.png">
+            	<img width="10%" src="Team/progress/img/AustinImg/discrete_led.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+            The surface mount LEDs will allow us to have a smaller profile when we add the LEDs to the guitar neck. The discrete LEDs would be small enough in diameter that we would be able to fit six in a row. I learned that there is a lot of preplanning involved when designing devices with multiple components. There also needs to be extensive research and property checking to verify that the parts are good for the product. The next step would be to develop the functional specification of the project and realize any constraints that we may run into during the project.
+            <br>
+
+            <br>
+
+            <h4>Week 2:</h4>
+            <b>Date:</b> 20 January 2017<br>
+            <b>Total hours:</b> 12<br>
+            <b>Description of design efforts:</b><br>
+            Most of the time for week 2 was spent on finishing the functional specification of the project. For the functional specification, I researched more into the electrical components that would go on the PCB (microcontroller, Bluetooth capability, LEDs, etc.) and got the measurements for the guitar neck. A lot of researching on the internet was done to determine what microcontroller would be the best to use for our project. It seems like a STM32F030C6 would work for us, but we need to make sure it is compatible with Bluetooth and USB. I also looked more into using strip LEDs for the neck. Strip LEDs would be nice to use, but there is the issue that we need the LEDs to be evenly spaced for the guitar neck and it cannot be too thick. Measuring the guitar was a necessary task as it helps the team better understand how much room we have to work with when planning out the device and designing the PCB. My guitar’s measurements are:
+            </br> <br>
+			<div align="center">
+            	<img style="float: center;" width="70%" src="Team/progress/img/AustinImg/guitar_measurements.png"> 
+            	<p style="clear: both;">
+            </div>
+            <br>
+            With these measurements, I learned that modularizing the PCBs might be a bit more difficult because the measurements of the PCB would change depending on their placement on the neck.
+            <br> <br>
+            A lot of work in improving our design was also done during this week. Instead of going with signal processing of the guitar to determine what note/chord was played, we will be going with turning the strings and frets of the guitar neck into a switch matrix. Building this is new to me so I did some reading as to how it could be done. It sounds like we would have to power the strings and make the string and fret contact into a type of switch that would complete the circuit and indicate a note pressed to the microcontroller. This changes the project as we would not need a microcontroller with a lot of memory. The next step would be to build a prototype of the switch matrix using guitar strings and frets and interface them with LEDs. This prototype would then verify if our new design is viable for the final product. <br>
+            <div align="center">
+            	<!-- <img style="float: left;" width="48%" height="20%" src="Team/progress/img/AustinImg/switch_matrix.png"> -->
+            	<img style="float: left;" width="30%" src="Team/progress/img/AustinImg/switch_matrix.png">
+            	<img style="float: right;" width="48%" src="Team/progress/img/AustinImg/prototype_switch_matrix.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+
+            <br>
+
+            <h4>Week 3:</h4>
+            <b>Date:</b> 27 January 2017<br>
+            <b>Total hours:</b> 19<br>
+            <b>Description of design efforts:</b><br>
+            This week was spent on finalizing the major components for the PCB. This included the microcontroller, LEDs, vibration sensor, Bluetooth transceiver, and battery. I was responsible for finalizing the LEDs, vibration sensor, and battery and charging circuit for the project. We decided to go with using Kingbright APT3216LVBC/D blue surface mounted LEDs. These LEDs had a forward voltage of 2.65 volts and an operating current of 2mA. This means that the LED has low power dissipation of 5.3mW and would not drain our battery as much. We needed a way to determine if the user strummed the guitar. Initially, I tried seeing if we could pick up the change in resistance of the string when pressed against a fret. The strings had a resistance of 1 to 2 ohms, and they increased when pressed against a fret and decreased when measured at a shorter distance from the guitar bridge. With these findings, using a vibration sensor would be simpler since the sensor would be able to pick up reverberations from the guitar when the strings are strummed. The vibration sensor is going to be 7BB-20-6L0 Piezo element disc sensor. The battery was chosen based on voltage rating and current capacity. The battery is 3.7V Lithium Ion battery with a current capacity of 6600mAh. This means that we would have total capacity of 24.42 Wh of power (3.7V * 6600mA). This amount would be plenty for powering the microcontroller, Bluetooth transceiver, LEDs, and any other peripherals with a lot of extra power to spare. I also decided that I wanted the battery to be rechargeable without removing the entire battery from the device. Using a charging circuit in addition would help solve this problem and add a bonus functionality of either plug-in-and-play or mobile playing. The charging circuit also has the ability to ramp up the voltage to 5.2V if we need more voltage. <br>
+            <div align="center">
+            	<img width="20%" src="Team/progress/img/AustinImg/kingbright_led.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/piezo_element.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/charging_circuit.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/battery.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+            In addition to finalizing the components, I worked on building the circuits for the prototype. I first started with building a simple circuit that would test the validity of using the string and fret as a switch matrix. I built the circuit using a 1k ohm resistor, LED, and 5V power supply and the circuit would turn on an LED when the powered string touches a fret. This raised a safety problem when I built the circuit: would the battery short if the user plays a bar chord or if he/she acts as a bridge between two or more strings. To mitigate this problem, the microcontroller could clock the power to the strings so these bridges would not happen. <br>
+            <div align="center">
+            	<img width="50%" src="Team/progress/img/AustinImg/test_circuit1.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/prototype1.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+            We have a lot of LEDs that will need to be powered and routed to the microcontroller pins. Fortunately, all of the LEDs do not need to be on at the same time. To determine if the 3.7V battery and 5.2V ramp up charging circuit will be sufficient for the entire project, I talked with my power professor to see how I would go about solving for Vsource (the battery). I learned that determining the battery depends on the total voltage of the load (the LEDs, micro, and other peripherals). Using this total voltage, I would add resistors to meet the operating current condition of the LEDs. Using this information, I can then calculate the energy and power consumed and determine the capacity of the battery from there. The selected battery should have plent of power to power the entire device. However, the problem was going to be the configuration of the LEDs. After doing some more research on charlieplexing, I learned that a charlieplex formation would not work for us since charlieplexing only allows one LED to be on at a time. When playing bar chords, we would want to illuminate an entire bar and then the other notes to complete the chord. This means that we might have at least two LEDs illuminated for one string. A different formation would need to be designed. I decided to try connecting the positive leads together down the string and have the negative leads go to the microcontroller. This should tell the microcontroller what string and fret was pressed. The next steps are to intergrate this circuit with the PIC32MX570F512L microcontroller and build the first circuit on Eagle. This way we could determine if the microcontroller is seeing the switch changes for the guitar notes. Until the microcontrollers come in, I will continue refreshing and practicing with Eagle to prepare for the circuit board design. <br>
+            <div align="center">
+            	<img width="20%" src="Team/progress/img/AustinImg/test_circuit.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/prototype1_multirow.png">
+            	<p style="clear: both;">
+            </div>
+            </br>
+           
+
+                      
+        </div>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>
