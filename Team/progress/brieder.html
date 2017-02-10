@@ -31,6 +31,15 @@ contact course staff.
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
+<style>
+  a.weeklink:hover {
+    color: black !important;
+  }
+
+  a.weeklink {
+    text-decoration: none;
+  }
+</style>
 
 </head>
 <body>
@@ -54,14 +63,38 @@ contact course staff.
             <h2>Progress Report for Brian Rieder</h2>
 
             <!--
-            <h4>Week 1:</h4>
+            <div id="week1">
+                <h4>Week 1:</h4>
+            </div>
             <b>Date:</b> -Enter today's date here-<br>
             <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
             <b>Description of design efforts:</b><br>
             -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
             -->
+            <div class="bar" style="background-color: white; border: 2px solid black">
+                <h4>Week:</h4>
+                <ul>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week2">2</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week3">3</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week4">4</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week5">5</a> </h4> </li>
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week6">6</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week7">7</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week8">8</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week9">9</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week10">10</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week11">11</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week12">12</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week13">13</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week14">14</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week15">15</a> </h4> </li> -->
+                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week16">16</a> </h4> </li> -->
+                </ul>
+            </div>
 
-            <h4>Week 2:</h4>
+            <div id="week2">
+                <h4>Week 2:</h4>
+            </div>
             <b>Date:</b> 19 January 2017 <br>
             <b>Total hours: </b> 9 <br>
             <b>Description of design efforts:</b><br>
@@ -82,7 +115,9 @@ contact course staff.
             <br>
             <br>
             
-            <h4>Week 3:</h4>
+            <div id="week3">
+                <h4>Week 3:</h4>
+            </div>
             <b>Date:</b> 27 January 2017 <br>
             <b>Total hours:</b> 11 <br>
             <b>Description of design efforts:</b><br>
@@ -109,7 +144,62 @@ contact course staff.
             As we progress further through this design, we're coming to more and more conclusions about what is and isn't possible for us to implement on the guitar. We've had several roadblocks such as the shorting of powered strings across a finger that is being addressed through alternating power, the issue of the bridge shorting the entire system due to its conductive properties that is going to be attempted to be addressed by insulating each string using liquid rubber or heatshrink wrapping, and the placement of LEDs on the neck. We continue to make large design choices daily and all play devil's advocate in order to ensure that we're thinking of every detail with the project. Each of us play the role of providing alternate technical solutions to the problems we come up with which necessitates a significant amount of brainstorming time as a team at this junction. As such, a significant amount of personal contribution is done here - not only by me, but everyone on the team. I serve the role as the sole computer engineer and bring what electric design experience I have to the table to keep us on the forward path.
 
             <br>
-                      
+            <br>
+
+            <div id="week4">
+                <h4>Week 4:</h4>
+            </div>
+            <b>Date:</b> 3 February 2017<br>
+            <b>Total hours:</b> 10.5 <br>
+            <b>Description of design efforts:</b><br>
+            The primary design efforts for this week shifted away from the theoretical to the physical implementation details of the project. A prime example of this was the consideration of isolation of the bridge from the strings - a design detail that was required to prevent the shorting of the string-fret matrix that would render the device effectively useless. In order to address this issue, we purchased liquid rubber for the purpose of prototyping. As shown in the first image below, we stripped a wire, dipped it in the liquid rubber, let it dry overnight, and ensured that the non-insulated sides were still conductive by powering on an LED and that the rubber-dipped section was non-conductive and did not power on an LED. Despite this approach working, we feared that the liquid rubber would not retain fidelity when stretched and rubbed across the bridge as the guitar was used and tuned. To address this, we considered using heatshrink and, in the process, came across string sleeves designed to reduce string wear that do not audibly dampen vibration and are made of insulating material. As of the time of this progress report, these sleeves are in the mail and will be tested in the next week. These parts are reflected in the Bill of Materials that we completed this week as a team in order to sort our thoughts regarding what parts are necessary to create the project.
+            <br> <br>
+            <div align="center">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/IsolationTest.jpg">
+                &nbsp;
+                <img style="" width="40%" src="Team/progress/img/BrianImg/FretboardOptions.jpg">
+                <p style="clear: both;">
+            </div>
+            <br>
+            Another facet of physical design that we considered was the addressing of the mounting of the LEDs inside of the guitar neck. This week while considering how that implementation should be done, the idea that we could simply use a PCB in place of the fretboard came to mind. While this does introduce a slew of potential considerations, this would allow direct contact between the fret and the PCB, reducing wiring down the body of the neck, allow surface mounted LEDs to be seen without drilling out a fretboard, and, as an added bonus, allow the package to have a "tech-chic" look. We agreed that this idea could be the one that we ultimately use for our design, but know that there are several points that need to be considered: moisture, force, ESD, and electrical contact. As a human user would be touching a bare PCB, we discussed several options for isolation including conformative coating, a fret-wise plastic overlay, a custom printed fretboard case, and a full-neck plastic cover. While this decision is not currently set in stone, the use of the PCB as a fretboard with a plastic cover is the current course of action that is being pursued. The other consideration, however, with using the PCB as a fretboard was the cost associated. As a team, we considered the advantages and disadvantages of a full-neck PCB (cohesive unit, functional design, high cost) and of a several PCB fretboard (modular design, requires solder bridges, multiple failure points, lower cost) and ultimately decided on a modular PCB fretboard as cost was a determining factor.
+            <br> <br>
+            <div align="center">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/DevBoard.jpg">
+                <p style="clear: both;">
+            </div>
+            <br>
+            In order to continue prototyping from a software perspective, I also acquired a dev board for the PIC32MX570F512L from Joe, shown above. The current plan of action is to begin the learning curve of the board and to light up LEDs. The ultimate goal before next week is to have the board interact with the guitar via IO pins to light up LEDs through a small subset of the fret-string matrix. Cole and I have also begun discussing the development of the app to control the system and have decided to create an Android app using a common development environment in Android Studio.
+
+            <br>
+
+            <div id="week5">
+                <h4>Week 5:</h4>
+            </div>
+            <b>Date:</b> 10 February 2017 <br>
+            <b>Total hours:</b> 8 <br>
+            <b>Description of design efforts:</b><br>
+            Despite a nagging lack of time this week, our design decisions of the last few weeks have allowed us to divvy up various tasks across the team and to start moving in on creating a functional design. As such, Austin and Jen took control of electrical and mechanical construction (PCB design, mechanical considerations) while Cole and I took the reins on the digital and software design aspects (developing an app, figuring out the microcontroller).
+            <br> <br>
+            My primary task this week was configuring our computer for development on our development board, setting up the programming interface for the board, and programming the board with a test program to show that we can use it. I installed the MPLAB IDE and the XC32 compiler on the group computer and configured it to work with the PIC32MX570F512L so that we could program the development board through the ICD 3. I attempted to run an empty template and found that the installation was missing seemingly deprecated peripheral libraries that appear to be in the process of being phased out by Harmony. I still manually installed these packages and was able to get the board to program with a blank program. Now that the environment and the programming interface were configured, my two personal goals for the week were the creation of a basic LED driving library and finding out how to drive the LCD on the development board. The first of these two goals was completed rather handily as there is sample LED driving code for our specific chip. A demonstration of an LED shift demo program that I wrote is displayed in the GIF below. When I attempted to find the LCD driver, however, there was no sample code for our specific chip that I was able to find. I attempted to adapt other sample code for the PIC32 platform to do this, but was ultimately unable to do so this week. As of the writing of this report, driving the LCD is my current investigative effort.
+            From the perspective of honest reporting, Harmony is still an enigma to me that I have to spend more time working with to understand. In the past, all development that I've done has been without a sort of "middleware" layer that performed translation that I'm not aware of. Getting to understand this is going to be a vital part of developing on the PIC32 platform.
+            <br> <br>
+            <div align="center">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/Dev_LEDProgrammed_Cropped.gif">
+                <p style="clear: both;">
+            </div>
+            <br>
+
+             This week, we wanted to do an analysis of the neck that we purchased for prototyping and testing. Unfortunately, I realized too late that the guitar neck that we had purchased was a Telecaster neck instead of a Stratocaster neck and we hit our first setback. Mechanically, we looked at two types of guitar: the Stratocaster (the guitar that we're using for this project) and a Telecaster (another Fender-based model that appears similar, but has several design differences. Both types of guitars' necks have a specific heel and bodies' have a specific neck pocket shape: the Strat has a rounded heel and a rounded pocket while the Tele has a flat-base heel and pocket. As shown in the image below, the Strat neck is compatible with both the Strat and Tele bodies, but the Tele neck is only compatible with the Tele body. This was the root of our issue - we'd purchased a Telecaster neck which CAN physically slot into the heel, but would not seat properly without a pocket-base gap and would cause the guitar to not intonate. As such, this experiment was abandoned while we order a proper neck.
+            <br> <br>
+            <div align="center">
+                <img style="" width="70%" src="Team/progress/img/BrianImg/Heel_Pocket_Comparison.png">
+                <p style="clear: both;">
+            </div>
+            <br>
+                        
+            As a team, we've made progress through Cole beginning development on the app, Austin and Jen handling hardware considerations and beginning to create base-level models of the stamp module and the final design. Progress is still continuing smoothly, but we need to make sure that everyone is on the same page consistently. Learning the rest of the toolchain for developing on PIC32 as a platform (namely with Harmony) is currently a daunting task - it's something where time still needs to be spent to understand it. I'm hoping to be able to write a small library to display debugging messages on the development board's LCD and have it drive external LEDs with GPIO pins. Prototyping needs to continue to occur - the microcontroller is a vital part of that progress.
+            <br>
+
         </div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
