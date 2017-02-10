@@ -52,8 +52,32 @@ contact course staff.
 		-->
 		<div id="content">
             <h2>Progress Report for Jen Isaza</h2>
+
+            <div class="bar">
+                <h4>Week:</h4>
+                <ul>
+                    <li> <h4> <a href="Team/progress/jisaza.html#week1" style="text-decoration:none">&nbsp;1</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/jisaza.html#week2" style="text-decoration:none">&nbsp;2</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/jisaza.html#week3" style="text-decoration:none">&nbsp;3</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/jisaza.html#week4" style="text-decoration:none">&nbsp;4</a> </h4> </li>
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
+                </ul>
+            </div>
             
-            <h4>Week 1:</h4>
+            <div id="week1">
+                  <h4>Week 1:</h4>
+            </div>
             <b>Date:</b> Jan. 13, 2017 <br>
             <b>Total hours:</b> 5 <br>
             <b>Description of design efforts:</b><br>
@@ -67,7 +91,9 @@ contact course staff.
 
 
             
-            <h4>Week 2:</h4>
+            <div id="week2">
+                  <h4>Week 2:</h4>
+            </div>
             <b>Date:</b> Jan. 20, 2017 <br>
             <b>Total hours:</b> 9 <br>
             <b>Description of design efforts:</b><br>
@@ -83,7 +109,9 @@ contact course staff.
             </div>
             <br>
              
-             <h4>Week 3:</h4>
+            <div id="week3">
+                  <h4>Week 3:</h4>
+            </div>
             <b>Date:</b> Jan. 27, 2017 <br>
             <b>Total hours:</b> 12 <br>
             <b>Description of design efforts:</b><br>
@@ -106,10 +134,37 @@ contact course staff.
             The microcontroller that was selected and ordered this week was the PIC32MX570F512L. This microcontroller had all of the capabilities we needed with extra features to spare, such as 512 Kbytes of flash memory, 81 I/O pins, and 48 ADC channels. Other features included are bluetooth and USB capability which will be important for the app user interface and the charging of the battery. Next week, I will be delving further into PCB design through Eagle tutorial samples and beginning to design the board with the PIC microcontroller we chose. 
 
             </br></br>
-            
-
-         
-
+            <div id="week4">
+                  <h4>Week 4:</h4>
+            </div>
+            <b>Date:</b> Feb. 3, 2017 <br>
+            <b>Total hours:</b> 14 <br>
+            <b>Description of design efforts:</b><br>
+            This week, the team delved further into our own specialties. In order to prepare for the build of our future PCBs, I downloaded Eagle and began many of their tutorials, in addition to Sparkfun tutorials. I have previous experience using DxDesigner, which is a similar PCB editing pregram, but my work mainly focused on efficiency of routing and transferring design specs that were already made. Therefore, I especially focused on design requirements while going through the tutorials. Placement requirements, such as making sure connectors are facing an edge of the board or placing a decoupling capacitor close to the IC, were some of the important details that would have to be considered when designing a board. 
+            </br></br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="50%" src="Team/progress/img/JenImg/Eagle_Tutorial.png"> 
+            </div>
+            </br></br>	
+            </br></br>
+            One major difficulty from this week was finding the microcontrollers that we orded (neither the PIC32MX5700F512L-I/PF or -50I/PT) in Eagle. The only PIC32 in Eagle that we could find was the PIC32MX570F512H-50I/PT which has 64 leads instead of 100. However, after counting the number of I/O pins that we would need, we ruled the 64-lead option out. The switch and LED matrices alone would require 56 I/O pins which is above the 49 I/O pin capability of the 64-lead microcontroller. To solve this problem, we need to decrease the number of I/O pins through shift registers or multiplexing, or we need to use the 100 lead microcontroller. We decided to use shift registers for the LED matrix in addition to using the 100 lead microcontroller, in case we end up needing more I/O pins. In order to progress in Eagle, Austin and I will have to create our own microcontroller design and add it to the Eagle library. 
+            </br></br>
+            The group also made a lot of changes to the overall design of the fretboard. Instead of removing and milling the fretboard, we will now be making the PCB as the fretboard and then putting a clear plastic over the PCB as protection. I came up with the plastic idea after looking at phone screen protectors, so I researched what plastics these protectors are made from. Most phone protectors are made from plastics called PET and TPU, but I also found some vinyl sheeting that might work just as well. Vinyl is also much easier to find in sheets and is cheaper. Difficulties in this plan may come from the separation of the fretboard from the neck of the guitar. In order to weaken the glue, the neck must be heated up so that we can separate the fretboard and the frets. In order to have the frets connect to the PCB, the sides of the PCB would have copper leads coming out of the sides where each fret would be placed. This way, we would be able to have a continuous plastic sheet cover the fretboard, instead of cutting slots in the plastic for each fret. Other concerns deal with attaching the plastic to the fretboard. One idea is to make a side adhesive, which would make the plastic coating permanent. Another idea is making the plastic layer latch down and removable, which would then add the challenge of attaching the plastic to the latch while maintaining comfort for the user. 
+            </br></br>
+            One of the most helpful ideas this week was making the PCB board double sided. The bottom side would contain all of the parts that may be more pressure sensitive, and the top side would only contain LEDs and frets, which would touch the plastic coating and be pressed by the user. We also investigated different materials that could be used for the coating on guitar strings in order to insulate them. Our prototype for the week proved that the liquid rubber coating we bought would work as advertised and insulate the wire that was dipped in it. One side was connected to power with an LED and the insulated side was just connected to an LED. The side with the power was the only side whose LED lit up, meaning that the rubber did, in fact, insulate the wire.   </br></br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="50%" src="Team/progress/img/JenImg/Prototype1.png"> 
+            </div>
+            </br></br>	
+            While this test worked, we still have to consider whether the rubber would not fail when bent and attached to the guitar due to the friction between the strings and the bridge. Professor Meyer suggested looking into heat shrink tubing, which he thinks may be more durable than the liquid rubber. After doing some research, I found "Big Bends String Sleeves" which are made to go between the strings and the bridge. However, we are not positive if these sleeves would actually isolate the string based on the "correct" way the sleeves are to be placed, as seen in the picture below. 
+            </br></br>	
+            <div align="center">
+            	<img style="float: left;" width="48%" src="Team/progress/img/JenImg/Big_Bends.png">
+            	<img style="float: right;" width="48%" src="Team/progress/img/JenImg/String_Sleeve.png">
+            	<p style="clear: both;">
+            </div>
+            </br></br>	
+          
                       
         </div>
 	
