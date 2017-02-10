@@ -73,9 +73,36 @@ contact course staff.
             After significant discussion with the ECE 477 course staff, the digital signal processing concept was officially revoked. With that said, we had the main hardware concepts layed out and removed a large level of complexityfrom the software requirements. Brian and I took the opportunity to lay out as much of the software as possible. The first issue to tackle was data management and encoding. I spent some time brainstorming ideas to present to the team. There were three main contenders for data encoding. The first was splitting the bits of one byte into two groups and assigning each group to designate either the string or fret respectively. This works perfectly because a 3/5 split on an 8 bit set allows for a comprehensive set of options for both strings and frets with zero wasted bits. The possible combinations were not exhaustive of the available range in a single byte which allows for specialty characters to be stored. The second option was an array of characters where each character would represent the fret for its given string based on position within the array. This method is very easy to read to the human eye but is not effecient on space saving or time to read. The final option was to create a binary search tree encoding for each string-fret combination and store songs as keys to the tree. This method would be very effecient to search for the data, however we found that it was redundant compared to the first idea because string and fret information would still have to be stored. Storing the string and fret information within each leaf would be most effeciently done by creating a 3/5 split on a single byte, which is identical to what was already proposed. A combination of the first and second option is what was decided by the team, with Brian and I having frequent discussions on the matter.
             <br>
             <div align="center">
-            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/thumbnail_zerocross.png" class="rotate90"> 
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/StateMachineDiagram.jpg"> 
             </div><br>
             With the deadline of the software overview this week. I spent a lot of time building the framework for what the software and firmware would be doing. In order to better formulate my thoughts, I made a series of flowcharts that depicted various steps of code's process. After discussing the flowcharts with Brian, he developed a good state-machine diagram to even further convey the algorithms. I then created a formal version of his diagram and included it within the software overview. On top of all the tangable progress, I have put a great deal of thought on how the interfaces of the remote user controller should be set up. Were we to design a phone application, I have brainstormed some concepts of how it would be designed.
+            </br>
+
+            <br>
+	    <h4>Week 4:</h4>
+            <b>Date:</b>03 Feb 2017<br>
+            <b>Total hours:</b> 8<br>
+            <b>Description of design efforts:</b><br>
+            The team spent the week making some of the final design choices and preperation work before we start to "get our hands dirty" in the upcoming weeks. We put in a lot of thought and brainstorming into methods to reduce the number of wires needed to run up the neck of the guitar to properly power everything. After the always wonderful help of the course staff we decided on a mirrored system for LEDs and fret pressing recognition. The concept is to make a switch matrix that acts as a large grid where we can index signals to positions based off of their row and column. These signals will be cycled at a high frequency to make the illusion that multiple LEDs and strings are being powered at once to the human eye. However in reality only one LED or string will be powered at any given time but the rate at which they change will be quicker than humans can detect. In order to protect the circuitry we have decided on exposing the integrated circuitry to the user visually, but covering the electronic with a layer of clear plastic.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/LiquidRubber.jpeg" class="rotate90"> 
+            </div><br>
+            With physical construction of Guitutar approaching quickly, we needed to start getting parts. Due to where I live in comparison to my teammates, it made the most sense for me to make a trip to get supplies. I headed to Menards to get liquid rubber and extra guitar strings to test our ability to isolate signals inside the guitar strings as they enter the metal frame inside the body of the guitar. After finding the liquid rubber but being unable to find guitar strings, I developed a circuit that could properly prove that the liquid rubber could isolate the strings inside the guitar.
+            </br>
+
+
+	    <br>	    
+	    <h4>Week 5:</h4>
+            <b>Date:</b>10 Feb 2017<br>
+            <b>Total hours:</b> 5<br>
+            <b>Description of design efforts:</b><br>
+            The team spent the week making some of the final design choices and preperation work before we start to "get our hands dirty" in the upcoming weeks. We put in a lot of thought and brainstorming into methods to reduce the number of wires needed to run up the neck of the guitar to properly power everything. After the always wonderful help of the course staff we decided on a mirrored system for LEDs and fret pressing recognition. The concept is to make a switch matrix that acts as a large grid where we can index signals to positions based off of their row and column. These signals will be cycled at a high frequency to make the illusion that multiple LEDs and strings are being powered at once to the human eye. However in reality only one LED or string will be powered at any given time but the rate at which they change will be quicker than humans can detect. In order to protect the circuitry we have decided on exposing the integrated circuitry to the user visually, but covering the electronic with a layer of clear plastic.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="30%" src="Team/progress/img/ColeImg/LiquidRubber.jpeg" class="rotate90"> 
+            </div><br>
+            With physical construction of Guitutar approaching quickly, we needed to start getting parts. Due to where I live in comparison to my teammates, it made the most sense for me to make a trip to get supplies. I headed to Menards to get liquid rubber and extra guitar strings to test our ability to isolate signals inside the guitar strings as they enter the metal frame inside the body of the guitar. After finding the liquid rubber but being unable to find guitar strings, I developed a circuit that could properly prove that the liquid rubber could isolate the strings inside the guitar.
             </br>
 
             <br>
