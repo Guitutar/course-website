@@ -53,7 +53,30 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Austin Peterson</h2>
             
-            <h4>Week 1:</h4>
+            <div class="bar">
+                <h4>Week:</h4>
+                <ul>
+                    <li> <h4> <a href="Team/progress/peter174.html#week1" style="text-decoration:none">&nbsp;1</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week2" style="text-decoration:none">&nbsp;2</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week3" style="text-decoration:none">&nbsp;3</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week4" style="text-decoration:none">&nbsp;4</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li>
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
+                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
+                </ul>
+            </div>
+            <div id="week1">
+                  <h4>Week 1:</h4>
+            </div>
             <b>Date:</b> 13 January 2017<br>
             <b>Total hours:</b> 5<br>
             <b>Description of design efforts:</b><br>
@@ -70,7 +93,9 @@ contact course staff.
 
             <br>
 
-            <h4>Week 2:</h4>
+            <div id="week2">
+                  <h4>Week 2:</h4>
+            </div>
             <b>Date:</b> 20 January 2017<br>
             <b>Total hours:</b> 12<br>
             <b>Description of design efforts:</b><br>
@@ -85,7 +110,6 @@ contact course staff.
             <br> <br>
             A lot of work in improving our design was also done during this week. Instead of going with signal processing of the guitar to determine what note/chord was played, we will be going with turning the strings and frets of the guitar neck into a switch matrix. Building this is new to me so I did some reading as to how it could be done. It sounds like we would have to power the strings and make the string and fret contact into a type of switch that would complete the circuit and indicate a note pressed to the microcontroller. This changes the project as we would not need a microcontroller with a lot of memory. The next step would be to build a prototype of the switch matrix using guitar strings and frets and interface them with LEDs. This prototype would then verify if our new design is viable for the final product. <br>
             <div align="center">
-            	<!-- <img style="float: left;" width="48%" height="20%" src="Team/progress/img/AustinImg/switch_matrix.png"> -->
             	<img style="float: left;" width="30%" src="Team/progress/img/AustinImg/switch_matrix.png">
             	<img style="float: right;" width="48%" src="Team/progress/img/AustinImg/prototype_switch_matrix.png">
             	<p style="clear: both;">
@@ -94,7 +118,9 @@ contact course staff.
 
             <br>
 
-            <h4>Week 3:</h4>
+            <div id="week3">
+                  <h4>Week 3:</h4>
+            </div>
             <b>Date:</b> 27 January 2017<br>
             <b>Total hours:</b> 19<br>
             <b>Description of design efforts:</b><br>
@@ -120,6 +146,43 @@ contact course staff.
             	<img width="20%" src="Team/progress/img/AustinImg/prototype1_multirow.png">
             	<p style="clear: both;">
             </div>
+            <br>
+
+            <br>
+
+            <div id="week4">
+                  <h4>Week 4:</h4>
+            </div>
+            <b>Date:</b> 3 February 2017<br>
+            <b>Total hours:</b> 13.5<br>
+            <b>Description of design efforts:</b><br>
+            For this week, I started to look more into the electrical analysis of the project. A lot of time was spent on determining if the selected 3.7V battery ramped up to 5.2V will be satisfactory for powering the project. Using the information from my professor and researching online, the total power consumption for two LEDs in series will be 13.515mW. A problem that might occur is when a bar chord needs to be illuminated (9 LEDs total). For LEDs in series, the voltage drop is the sum of the two LEDs and the current stays constant. For LEDs in parallel, the voltage is constant and the operating current increases. I am not sure how much the circuit's power consumption and forward voltage will change when multiple LEDs in series and parallel are on. More research and talks with my professor will need to be planned. The strings will be powered with 3.7V and they will be clocked at a frequency greater than 360 Hz because this will be fast enough that a user will not recognize that only one string is powered at a time. This will ensure that a short will not occur when two strings are joined through a type of bridge. <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/LED_Power_eqns.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            During lab hours, we changed how we wanted to implement the PCB into the neck of the guitar. A large issue was how we wanted to implement the PCB into the neck. Two questions about implementing the PCB into the neck were discussed: "Did we want to mill out sections from the fretboard" or "Did we want to build our own fretboard". We agreed to use a modular PCB where instead of one large PCB or multiple small PCBs for each fret, we will build multiple cut into sections PCBs that will span the entire neck. We can use a two sided PCB to route the traces for the LEDs on one side and have the components on the other. The PCBs would be connected through a solder bridge on the edges of the PCBs. The frets would also be on the same side as the components and they will be attached to the PCB to ensure electrical contact. A clear plastic layer will be applied over the PCB to protect the circuit and to finalize the packaging of the device. The plastic selected must be clear enough for the LEDs to shine through and not allow the plastic to turn opaque when light shines through it. In addition to reworking the switch matrix test circuit, I also worked on a  test circuit for the validity of the insulation. The strings are touching a metal bridge on the guitar that will act as a short between the strings when they are powered. It was decided that we would use some form of insulation to isolate each string without affecting the sound quality. Using liquid rubber, I checked to see if the material we selected was sufficient enough to prevent fraying and prevent current flow. The rubber does prevent current flow, but it could be punctured or frayed. Alternatives were researched, and using a product called string sleeves could solve our problem. Future tests to determine if these sleeves are sufficient will be conducted once the parts get in. <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/prototype2_rubber.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            In addition to the circuit analysis, I built a block diagram to explain the different sections of the device and the orientation of the LED array and switch matrix. Since the design of the PCB will be modular, I will have to consider the changing size of the guitar neck when I design the fret PCBs. Each PCB would also need to route the traces touching the fret and the LEDs to the microcontroller. This will require multiple layouts.
+            <div align="center">
+                  <img width="70%" src="Team/progress/img/AustinImg/ElectricalOverview_BlockDiagram.png">
+                  <p style="clear: both;">
+            </div> 
+            <br>
+
+            <br>
+
+            <div id="week5">
+                  <h4>Week 5:</h4>
+            </div>
+            <b>Date:</b> 10 February 2017<br>
+            <b>Total hours:</b> 9<br>
+            <b>Description of design efforts:</b><br>
             </br>
            
 
