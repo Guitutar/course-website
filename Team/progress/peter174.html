@@ -61,7 +61,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week3" style="text-decoration:none">&nbsp;3</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week4" style="text-decoration:none">&nbsp;4</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
@@ -200,8 +200,26 @@ contact course staff.
             </div>
             <br>
             Overall, progress on the mechanical side of the project is going well. We still have crucial parts such as the piezo disc and Bluetooth transceiver that are coming in that still need to be tested. Brian was able to get LEDs to illuminate on the development board for the microcontroller. The next step is to connect the microcontroller to the switch matrix and determine if the microcontroller is receiving input from the switch matrix. We also need to test multiple rows of LEDs and illuminate several of them using the microcontroller and powering the system with the battery circuit. This coming week, I will be putting more focus on building the stant board for the microcontroller and developing the Eagle library.
-            </br>
-           
+            <br>
+
+            <br>
+
+            <div id="week6">
+                  <h4>Week 6:</h4>
+            </div>
+            <b>Date:</b> 17 February 2017<br>
+            <b>Total hours:</b> 14<br>
+            <b>Description of design efforts:</b><br></br>
+            A lot of work on building the schematic in Eagle was done this week. There were three goals that I wanted to accomplish for this week: build the Eagle library parts, build the stamp board, and build the complete schematic for the project. Building the microcontroller was not too difficult as I built it by using a large schematic symbol that shows each pin and pin name and using a pre-built PCB layout that matched the dimensions of our microcontroller. The microcontroller required a lot of resistors and decoupling capacitors. These components and a ICSP header and four 25-pin headers were added to the schematic. I will have to do some research in what pin headers we want to use. I already selected the resistors and capacitors and updated the BOM. I also built the Bluetooth module symbol in a similar fashion. I had to build the PCB layout manually since there were no identical models to use. When building the Bluetooth module, I recognized that the part we selected does not have an onboard transmitting antenna. The other part, which is numbered BM78SPPS5NC2, has an onboard antenna and it was decided that we will use that part instead. This makes building the circuit easier since we do not need to integrate an antenna and any other external parts to make the Bluetooth module work. <br>
+            <br>
+            <div align="center">
+            	<img width="20%" src="Team/progress/img/AustinImg/guitutar_sch_1.png">
+            	<img width="20%" src="Team/progress/img/AustinImg/guitutar_sch_2.png">
+            	<p style="clear: both;">
+            </div>
+            <br>
+            We ran into several roadblocks when programming the microcontroller. The main issues were getting Harmony set up and finding sample code for the PIC32 microcontroller. After getting help from our TA, we were able to get Harmony set up, and Brian was able to set up test code for LEDs. We are planning on building a 3x6 LED matrix and be able to get the micro to illuminate LEDs in the order of a guitar chord. On the PCB side, I am going to see if the schematic that Jen and I worked on will be able to build the PCB layout. A primary issue I forsee is that the switches are not supposed to be built on the layout and the LED matrix needs to be on separate boards from the microcontroller. I will have to learn how to build solder bridges in Eagle and be able to apply them to our circuit layout. Another issue I am predicting is issues with the traces overlapping. The microcontroller has 100 pins and is very small and Eagle needs to be configured so that we could build the layout and not have overlapping signal traces. We also need to add a line on the layout that will serve as a connection to the guitar fret. 
+            </br>  
 
                       
         </div>
