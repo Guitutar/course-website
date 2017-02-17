@@ -181,8 +181,25 @@ contact course staff.
                   <h4>Week 5:</h4>
             </div>
             <b>Date:</b> 10 February 2017<br>
-            <b>Total hours:</b> 9<br>
+            <b>Total hours:</b> 10<br>
             <b>Description of design efforts:</b><br>
+            For this week, I took a look at determining how we were going to attach the PCB to the guitar neck. To start, I used Autodesk Inventor Pro to design a small CAD part that will provide a flat surface and house the PCB. I had to take measurements with a caliper to be able to get accurate measurements for the part. The part was modeled to have a length of 21.05mm and a width of 21.05mm. There is a recessed section in the back of the part that was made to compensate for a slight slope near the base of the guitar neck. This way, the housing will have clearance to adhere to the neck and provide a level surface. There is also a recessed section on the bottom cut out that will house the PCB.  <br>
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/pcb_mount.PNG">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            One issue about using this mount was connecting the guitar neck PCBs to the microcontroller PCB housed on the mount. If we used the mount, then we would have to route multiple wires off the side of the neck and into the microcontroller. It was later decided that it would be better to place the microcontroller near the center of the guitar neck on the neck PCBs. The reason for this change was to minimize the ammount of continuous traces that connected the LEDs to the microcontroller. This also solved our issue of connecting the PCB on the mount to the PCBs on the neck. In addition, this change was better for the project since we could utilize the underside of the PCB to mount the microcontroller if the topside was getting cluttered. A few potential issues about this design would be heat and accessibility. Since the microcontroller is going to be completely covered by the guitar neck, heat might cause issues to the functionality of the chip. However, we are not running the chip at a high clocking frequency, and we are not expecting heat to be an issue. The other issue is accessibility. This configuration would prevent us from accessing the microcontroller if there are any issues. A solution to this would be to add multiple test pads that go through the board that will provide us access to determine if the microcontroller is working properly. <br>
+            <br>
+            Another issue we have to consider is how we are going to attach the PCB and plastic cover onto the guitar neck. We could use either screws or glue to adhere the plastic cover to the neck PCBs. I was thinking of potentially using Velcro straps to attach the PCB to the guitar neck. This allows us to be able to remove the PCBs with ease when needed. A big problem is potential bending of the PCBs when pulling the PCB off the neck. In addition, removing the PCB multiple times would wear the Velcro strap which would cause the PCBs to hang off and maybe become uneven. We could use glue, but then the adhesion would be a permanent solution and we would not be able to remove the PCBs without damaging parts. <br>
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/sideview_neck.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            Overall, progress on the mechanical side of the project is going well. We still have crucial parts such as the piezo disc and Bluetooth transceiver that are coming in that still need to be tested. Brian was able to get LEDs to illuminate on the development board for the microcontroller. The next step is to connect the microcontroller to the switch matrix and determine if the microcontroller is receiving input from the switch matrix. We also need to test multiple rows of LEDs and illuminate several of them using the microcontroller and powering the system with the battery circuit. This coming week, I will be putting more focus on building the stant board for the microcontroller and developing the Eagle library.
             </br>
            
 
