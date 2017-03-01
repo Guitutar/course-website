@@ -79,7 +79,7 @@ contact course staff.
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week4">4</a> </h4> </li>
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week5">5</a> </h4> </li>
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week6">6</a> </h4> </li>
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week7">7</a> </h4> </li> -->
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week7">7</a> </h4> </li>
                     <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week8">8</a> </h4> </li> -->
                     <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week9">9</a> </h4> </li> -->
                     <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week10">10</a> </h4> </li> -->
@@ -203,10 +203,55 @@ contact course staff.
             <div id="week6">
                 <h4>Week 6:</h4>
             </div>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
+            <b>Date:</b> 17 February 2017 <br>
+            <b>Total hours:</b> 12 <br>
             <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
+            This week was yet another week of painful attacks on the PIC32MX. I spent an exorbitant amount of time banging my head on the wall with plib.h before realizing in man-lab on Wednesday after talking to Matt that I wasn't utilizing Harmony at all. Once I realized that I had to install and configure Harmony properly to be able to generate code that we could build on top of as to not have to rewrite peripherals such as UART. I removed all of the plib driver work I had done the week before (effectively counteracting 6 hours of progress made in the first half of the week) and began trying to crack into Harmony. After some more discussion on Matt, I came up with a gameplan for how to attack Harmony moving forward and that was my primary point of progress. As of now, the current objective is driving an external LED based on another digital signal indicator. The image below shows the Harmony configurator after it had been run and generated the pinout, code structure, and clock diagram shown below.
+            <br> <br>
+            <div align="center">
+                <img style="" width="95%" src="Team/progress/img/BrianImg/MPLABHarmonyConfigured.png">
+                <p style="clear: both;">
+            </div>
+            <br>
+            In order to work with the Explorer 16 to interface with an external part (such as the previously mentioned LED and switch), I needed to determine what pins would be used on the breakout board, the PICTail Plus. After some discussion with Joe, I came to the realization that the pinout for the PIM that we are using may be different than the pinout that the PICTail plus expects (the MA200011). As such, I tracked down a schematic for the '11 PIM  and the pinout for our specific microcontroller PIM. From there, I talked to Joe and decided that I needed to create a direct mapping from the Explorer's expected pins and the pins from the PIM that we are using so that I could drive specific I/O: for instance, if I wanted to power an LED on Port C's 4th bit from our microcontroller, that output may actually come out on the PICTail Plus's Port D's 4th bit. This mapping is vital for us to be able to drive output during prototyping, but the decisions for what bits are going to be used need to be well-defined in order to continue with the PCB development.
+            <br> <br>
+            <div align="center">
+                <img style="" width="45%" src="Team/progress/img/BrianImg/Explorer16ExpectedPIM.PNG">
+                &nbsp;
+                <img style="" width="45%" src="Team/progress/img/BrianImg/PIC32MXPIM.PNG">
+                <p style="clear: both;">
+            </div>
+            <br>
+            Along the way, I've spent quite a bit of time helping with the design of the system from a digital perspective - considerations regarding the shift register, the connections for UART on Bluetooth, general construction structure, and the use of git were just a few facets of where a lot of my time was spent. Since this project can't be 100% compartmentalized, this was a necessary evil in order for the projecct to progress and to make sure that everyone is on the same page. This was one of the most frustrating weeks by far simply due to the issues with configuring Harmony and figuring out how the tool is actually supposed to work. My goal right now is to forego the LCD driver, enable certain pins as I/O ports, and to attempt to power an external LED given a stimulus such as a basic switch. The future still has a lot coming, but I'm hoping to get a handle on MPLAB, Harmony, and the PIC to make our development lives much easier.
+
+            <div id="week7">
+                <h4>Week 7:</h4>
+            </div>
+            <b>Date:</b> 24 February 2017 <br>
+            <b>Total hours:</b> 21 <br>
+            <b>Description of design efforts:</b><br>
+            This was the week of a breakthrough! Once again, I spent an exorbitant amount of time banging my head on the wall with the microcontroller and finally I busted through (albeit my head still hurts from it). I was finally able to create a legitimate GPIO driver using Harmony and drive LEDs through ports on on the microcontroller. At this point, this gives me a lot of confidence in driving the entire LED array (provided that there are no power issues - that's my next prototyping project) and in receiving inputs from the switch matrix. One of the biggest gaps we have to jump over in software now is making Bluetooth work and formalizing our software development (more on that further down).
+            <br> <br>
+            <div align="center">
+                <img style="" width="33%" src="Team/progress/img/BrianImg/GPIOCircuit.jpg">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            In physical prototyping news, we were able to spend a couple hours this week and fully remove the fretboard of the guitar without damaging it. Originally we used an iron to heat the glue underneath the fretboard and wedged a putty knife in, but we ultimately found that using a heat gun was much more efficient for loosening the glue.
+            As for the progress made by this, not only did this give us experience in doing this if we want to do it to another neck, but it also allowed us to see the physical position of the truss rod in relation to the fretboard. Since it has been a concern throughout the entire course of this project that we would not have space underneath the fretboard to do any machining, seeing the distance from the truss rod to the surface was reassuring to say the least. At this point, we're getting ready to remove the frets and should be well on our way to creating a functional prototype once the PCB is done.
+            <br> <br>
+            <div align="center">
+                <img style="" width="28%" src="Team/progress/img/BrianImg/IroningGlue.jpg">
+                &nbsp;
+                <img style="" width="50%" src="Team/progress/img/BrianImg/RemovedFretboard.jpg">
+                <p style="clear: both;">
+            </div>
+            <br>
+
+            And of course, last but not least, the largest timesink of my week: the software formalization. In a way, I'm actually thankful that this assignment came this week, as it forced me to write down all of the ideas that I'd previously thrown out at the group and get them into a doucmented format. The formalization allowed explicit definition of the handshaking that needs to occur between the Guitutar guitar and the Android device that we're going to be using to develop the app. Having to do such an immense amount of research into the Bluetooth communication stack to write the paper gave me a very good idea of what still needed to be done and what's given to us. In worse news, seeing how far the examples were at the point makes me feel behind in our software development - something that we're going to need to address very quickly moving forward. My hope is that the implementation of Harmony is going to make that entire process much smoother and efficient, but only time will tell.
+            And, Matt, if you're reading this -- I'm sorry for the crazy amount of detail in that paper!
+            
+            </br>
 
         </div>
 	

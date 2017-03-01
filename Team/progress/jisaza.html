@@ -194,8 +194,51 @@ contact course staff.
             <b>Total hours:</b> 10 <br>
             <b>Description of design efforts:</b><br>
 		
-	     
+	     We were able to make a lot of progress this week with the PCB development. After doing different tutorials, I was able to apply what I had learned to this week's tasks of completing a parts library and preliminary schematics design. Austin and I split up different parts designs for the week, so I designed the shift registers, piezo, and USB PowerBoost with its battery. I also designed the LED and shift register schematic below. 
+<div align="center">
+            	<img style="image-orientation: 90deg;" width="50%" src="Team/progress/img/JenImg/LED_schem.png"> 
+            </div>
+            </br></br>
+We also completed the stamp board design this week, which was created by following the minimum requirements found in the microcontroller datasheet. 
+ </br></br>	
+            <div align="center">
+            	<img style="float: left;" width="35%" src="Team/progress/img/JenImg/micro_min_connections.png">
+            	<img style="float: right;" width="65%" src="Team/progress/img/JenImg/stamp_board.png">
+            	<p style="clear: both;">
+            </div>
+            </br></br>	
+ Some troubles that we are running into are schematic sizing and not being able to use more than two with the free version of Eagle. We are also worried about future programming of the microcontroller, since the stamp board will not fit within the guitar neck. Future concerns include a possible extra schematic that represents the actual PCBs more accurately. Right now, our schematic includes multiple parts that will not actually be represented on the PCB, such as the switch matrices from the frets and strings, the USB and battery, and the piezo. These parts are were important to include for an overall representation of the design, but are not convenient when transferring the from schematic to layout design. In order to prepare for the layout design, we must double check all connections and clean up the schematics so that the microcontroller is connected to the rest of the parts without the stamp boaard connections. 
+</br></br>	
+Other difficulties on the software side may affect our hardware design, as well. Brian has been having trouble working with the PIC32 due to different library issues with Harmony. Since there are more example programs with the PIC24, we may have to change to this microcontroller instead. This change would not greatly affect the PCB design, except for new pin connections. The main difference between the two microcontrollers is that the PIC24 is 16bit instead of the 32bit capabilities of the PIC32. 
+	     </br></br>	
+            <div id="week7">
+                  <h4>Week 7:</h4>
+            </div>
+            <b>Date:</b> Feb. 24, 2017 <br>
+            <b>Total hours:</b> 10 <br>
+            <b>Description of design efforts:</b><br>	
+	This week, I worked to clean up the schematics that we created last week and begin the layouts of the stamp board and PCBs. Last week, we created all of the devices for the whole guitar. While these devices were helpful for planning purposes, they were not transferrable for a layout. The main PCB that was originally created was split into the five PCBs that we will actually be using for the fretboard of the guitar. Each of the PCBs were very similar, except for the first PCB that includes the Bluetooth board and the third PCB which includes the microcontroller. The main schematic was able to be used for the stamp board, so that layout was created first. Some changes that were suggested were cleaning up the capacitor connections under the microcontroller and double checking the Vcap that needs to be 10 microfarads, unlike the other capacitors. 
+ </br></br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/stamp_layout_prelim.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
 
+Most changes for the week happened after the Wednesday lab. The main additions were the resistor packages between the shift registers and the LEDs and the addition of the crystal oscillator schematic. We decided to add resistor packages instead of individual resistors in order to save space when creating the layout board. After looking at the oscillator designs from the PIC32 data sheet, I decided to choose the 16MHz crystal in order to support the high frequency operation that we may use. The crystal schematic is only supplementary, but will be added as a backup in case the internal oscillators do not function at the frequency that we need or with the accuracy that we need. 
+ </br></br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/oscillator_schem.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+After adding these changes and dividing the PCBs, I began preparing for the layout boards. I made new measurements for the placement of the LEDs and dimensions for the boards from the new 22 fret guitar neck that we ordered and added lines on the layout board for guidance. One of the main troubles I've had with this third PCB is that the capacitors can't be on the underside of the PCB because of the LEDs. Since they have to be on the same side of the microcontroller, the capacitors majorly block many of the important pins that we will need for the other PCBs. Another difficult factor in having five PCBs is that Eagle will not let you open multiple schematics at a time, so measurements that will be necessary when connecting PCBs will be very difficult to make accurate. Overall, this week introduced many challenges with the PCB layout, and a lot of redo designs were made. Work for next week will have to start early, since we have so many new additions to make in order to keep on schedule. 
+ </br></br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/PCB3_prelim.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
           
                       
         </div>

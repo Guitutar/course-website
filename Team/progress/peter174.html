@@ -62,7 +62,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week4" style="text-decoration:none">&nbsp;4</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> -->
@@ -219,6 +219,25 @@ contact course staff.
             </div>
             <br>
             We ran into several roadblocks when programming the microcontroller. The main issues were getting Harmony set up and finding sample code for the PIC32 microcontroller. After getting help from our TA, we were able to get Harmony set up, and Brian was able to set up test code for LEDs. We are planning on building a 3x6 LED matrix and be able to get the micro to illuminate LEDs in the order of a guitar chord. On the PCB side, I am going to see if the schematic that Jen and I worked on will be able to build the PCB layout. A primary issue I forsee is that the switches are not supposed to be built on the layout and the LED matrix needs to be on separate boards from the microcontroller. I will have to learn how to build solder bridges in Eagle and be able to apply them to our circuit layout. Another issue I am predicting is issues with the traces overlapping. The microcontroller has 100 pins and is very small and Eagle needs to be configured so that we could build the layout and not have overlapping signal traces. We also need to add a line on the layout that will serve as a connection to the guitar fret. 
+            <br>
+
+            <br>
+
+            <div id="week7">
+                  <h4>Week 7:</h4>
+            </div>
+            <b>Date:</b> 24 February 2017<br>
+            <b>Total hours:</b> 3<br>
+            <b>Description of design efforts:</b><br></br>
+            I was out of town for the majority of this week so my work was minimal. Fortunately, my team was able to update me while I was gone. As of now, we removed the fretboard from the guitar neck in order to understand more about how much room we have to work with. I measured the fretboard in order to get an accurate measurement of how much room we have for the fretboard. Since we are building our own fretboard using a plastic layer and the PCB, we would have about 5.44mm of material to work with in order to keep the same height of the fretboard. Jen started working on the PCB layout of the stamp board. She mentioned that the layout is complete, but it might be in our best favor to add space for an external oscillator just in case we need it. I started looking at building the layout for the LED arrays. I added a resistor in front of each LED so we could prevent overvoltage/overcurrent on the LED. This will drive up our final cost as we would need to order 138 extra resistors. We took a look at resistor SMD arrays, but we are leaning towards using individual SMD resistors because the SMD arrays will be larger than the shift register and we would be tight on space. Brian was also able to get the microcontroller to receive input from a switch. This would then be applied to our switch matrix and would allow us to determine if the notes were pressed on the guitar. <br>
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/PiezoScopeTouch.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/PiezoScopeMass.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            On Friday, I was able to go into the lab to test the Piezo discs. The disc will be used to determine if the guitar is vibrating from strumming the guitar. This will be our input to the microcontroller saying that the note/chord was strummed and to move to the next note/chord. By hooking up an oscilloscope directly to the Piezo disc leads, I was able to see a wavefrom from touching the disc as seen in the image above on the left. However, vibrations were not being picked up. This led me to applying a mass on top of the disc and then checking the output waveform. The waveform was a lot more noticeable and light tapping on the desk was able to produce the waveform seen above on the right. I don't think we would need to apply an amplifier circuit to the Piezo disc since the amplitude of the waveform was 1-2V, which I am assuming is plenty for the microcontroller to be able to detect as an input.
             </br>  
 
                       
