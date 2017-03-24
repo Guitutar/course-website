@@ -63,10 +63,10 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li>
+                    <li> <h4> <a href="Team/progress/peter174.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
@@ -238,6 +238,67 @@ contact course staff.
             </div>
             <br>
             On Friday, I was able to go into the lab to test the Piezo discs. The disc will be used to determine if the guitar is vibrating from strumming the guitar. This will be our input to the microcontroller saying that the note/chord was strummed and to move to the next note/chord. By hooking up an oscilloscope directly to the Piezo disc leads, I was able to see a wavefrom from touching the disc as seen in the image above on the left. However, vibrations were not being picked up. This led me to applying a mass on top of the disc and then checking the output waveform. The waveform was a lot more noticeable and light tapping on the desk was able to produce the waveform seen above on the right. I don't think we would need to apply an amplifier circuit to the Piezo disc since the amplitude of the waveform was 1-2V, which I am assuming is plenty for the microcontroller to be able to detect as an input.
+            <br>
+
+            <br>
+
+            <div id="week8">
+                  <h4>Week 8:</h4>
+            </div>
+            <b>Date:</b> 3 March 2017<br>
+            <b>Total hours:</b> 5<br>
+            <b>Description of design efforts:</b><br></br>
+            This week was devoted to midterm design reviews. Work on PCB layout was continued and stamp module was finalized and submitted. Progress reports were not necessary for this week.
+            <br>
+
+            <br>
+
+            <div id="week9">
+                  <h4>Week 9:</h4>
+            </div>
+            <b>Date:</b> 10 March 2017<br>
+            <b>Total hours:</b> 31<br>
+            <b>Description of design efforts:</b><br></br>
+            A lot of this week was spent on finishing the PCBs. For this week, I made sure to finish and submit the stamp board and PCB1. PCB1 is the PCB that will house the top three frets and the Bluetooth module. This project is proving to be a lot harder where running traces along the entire neck is difficult to build on the layout. If we were able to use the professional version of Eagle earlier, we could have used more than two layers (the interior layers could be dedicated for component traces and the last layer would be dedicated to microcontroller traces). I also had to finish PCB3 due to Jen leaving for spring break early. This was no issue and I was able to finish PCB3 which houses the middle frets and the microcontroller. Due to time restrictions and how long it would take to receive and solder the PCBs, we might need to consider only doing PCB1-3 and leaving out the lower notes.<br>
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/PCB1.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/PCB3.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            In addition on working on the PCB layouts, I met with Joe Bougher to discuss the feedback we had for the midterm design review and other considerations we should add to our PCB. We talked about four topics: current limiting shift registers that run with I2C, Vibration detection, ESD protection, and use of an LDO. For the shift registers, we had two options: keep using our chosen SRs or switch to a current limiting shift registers. The new SRs would allow us to remove the resistor array to save space and it would require the use of I2C. However, we decided to keep our current SRs because the new SR would be bigger than our current one, and we would have to add an I2C multiplexer because our microcontroller only allows 2 I2C pins (this means that we could only use 16 SRs and we would potentially need 23). For vibration detection, we decided to drop using the Piezo discs and to use the guitar pickup. The pickup works on induced current and we would only need to connect an amplifier to the amp jack on the guitar. For ESD protection, a 330k resistor would be added in series to the fret which would ensure 1uA of current to the microcontroller. With a max output current of 15mA and a 330k resistor, we would be protected from 4950V of static. One oversight we had in designing the schematic was we had 3.7V and 5.2V at our use, but our micro only ran at 3.3V max. To fix this, we could use a low drop out regulator or LDO. We would use the PowerBoost to boost the battery voltage of 3.7V to 5.2V and then regulate the voltage to 3.3V.
+            <br>
+
+            <br>
+
+            <div id="week10">
+                  <h4>Week 10:</h4>
+            </div>
+            <b>Date:</b> 17 March 2017<br>
+            <b>Total hours:</b> 0<br>
+            <b>Description of design efforts:</b><br></br>
+            Spring Break
+            <br>
+
+            <br>
+
+            <div id="week11">
+                  <h4>Week 11:</h4>
+            </div>
+            <b>Date:</b> 24 March 2017<br>
+            <b>Total hours:</b> 6<br>
+            <b>Description of design efforts:</b><br></br>
+            Our stamp board and PCB3 boards arrived! I will begin working on soldering the components onto PCB3. This will include the microcontroller and the LDO. After inspecting the boards, it looks like the traces are very close, but there should not be any issues. To verify this, I can use the DMM to test for continuity between traces. PCB1 is finished and PCB2 is almost done. I would like to wait until PCB2 is aligned correctly with PCB1 and PCB3 before I want to order PCB1 and PCB2. I also want to update the BOM so the team has an organized and finalized list of parts when we start soldering the components. After talking with the TAs and the team, finishing PCB1, 2, and 3 are the minimum amount of boards we would need to achieve our PSSCs. We should focus our efforts on getting PCB1 and 2 fabricated and troubleshooting those three boards in order to get the project to work. Boards 4 and 5 will be delayed and added on if time allows. They are delayed because building the boards will become exponentially harder due to the increasing number of frets. I am hoping that we would be able to get PCB4 and 5 in the final product. To save space, we are considering using multiple resistor arrays. For example, if an LED array requires 6 resistors, we could use two 3-resistor arrays instead of one 6-resistor array. Brian is almost finished with the GPIO and Cole is still working on the controller app. We could use one of the Bluetooth transceivers and solder it to protoboard so we could start prototyping and debugging the Bluetooth communication. Work on building an amplifier for the pickup and adding a power switch to the PowerBoost are still in progress. I have an idea of how I would want to implement these parts, and it should not take too long to finish them. The amplifier will be a non-inverting amplifier circuit using an LM741 and built on protoboard and attached to the pickup jack. There is a wire on the inside that we can connect to that will serve as the input. This should not affect the output if the user wants to plug into an amplifier speaker. For the power switch, a simple switch on the positive wire will work as an "ON/OFF" switch. <br>
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/pcboard3.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/stampboard.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/pickup_amp.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+
             </br>  
 
                       
