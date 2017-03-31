@@ -67,7 +67,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
@@ -299,6 +299,22 @@ contact course staff.
             </div>
             <br>
 
+            <br>
+
+            <div id="week12">
+                  <h4>Week 12:</h4>
+            </div>
+            <b>Date:</b> 31 March 2017<br>
+            <b>Total hours:</b> 13<br>
+            <b>Description of design efforts:</b><br></br>
+            This week was spent primarily working on the Safety and Reliability analysis, practicing cutting the PCB to match the shape of the guitar neck, working on the pickup amplifier, and rework on PCB1, 2, and 3. Reviewing each component and subsystem for the FMEA was useful in that we could verify that we are mitigating all potential failures and ensure we have a great working product. It was also good to review the design review feedback with Joe earlier than later because a lot of his comments helped in mitigating any potential failures in our design. It was unfortunate to find out that PCB3 was organized the wrong way where we had the traces for PCB1 and PCB2 going towards PCB4 and PCB5. We also had to rework the resistor arrays since we made the mistake of not finding out what package size we wanted to use (the schematic was using a generic resistor array part found in the standard Eagle library). Jen fixed the errors and updated the boards (as seen in the pictures below), and I am working on verifying that all of the traces are aligned and all of the parts are set. It was an unfortuante setback, but it is a good lesson on why we have design reviews and PCB verification reviews. I still have yet to update the BOM on the current list of parts. I also decided to upgrade the UA741 op amp to a LM324 low-power quad-op amp because the LM324 is rated for 3.3V. It is going to be slightly bigger than the UA741, but a big benefit is that the LM324 is used for audio amplification and it can be powered by our 3.7V battery, 5.2V boosted voltage, or our 3.3V regulated voltage. I tested the circuit with a high pass filter, and I was only getting negative peaks. I might need to filter the output to get a clean signal and I might need to try using a low pass filter on the input instead. Cutting the PCBs are going to be a challenge. The PCBs need to be cut at an angle, and during the cut, the PCB will sometimes shift itself and make me cut through traces or pads. This could be mitigated by applying a force through the use of a C-clamp or by pressing down on the PCB.
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/PCB1_updated.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/PCB3_updated.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
             </br>  
 
                       
