@@ -68,7 +68,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
@@ -315,6 +315,32 @@ contact course staff.
                   <p style="clear: both;">
             </div>
             <br>
+
+            <br>
+
+            <div id="week13">
+                  <h4>Week 13:</h4>
+            </div>
+            <b>Date:</b> 7 April 2017<br>
+            <b>Total hours:</b> 20<br>
+            <b>Description of design efforts:</b><br></br>
+            There was a lot of hardware progress this week. All of the components that would be placed on a PCB were gathered and any parts that Joe did not have in his inventory were purchased. All of the PCBs were also reviewed and submitted for fabrication. I also took the extra time to model the board for PCB4. Therefore, we have four boards in total (which is 15 frets and 16 LED arrays in total) and an almost complete board instead of just having the minimum amount of boards. While I was building PCB4, I realized that either our method of building the PCBs or the type of components selected would not have worked for PCB5 or Frets 16 to 22. This is due to the size of the frets and the size of how the LEDs were organized. There wouldn't be enough room for 7 more shift registers and LED arrays in addition to the resistor networks and traces.
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/PCB3_solder.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/layout_neck.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
+            I also soldered one of the PIC32 microcontrollers and necessary decoupling capacitors and resistors onto one of the PCB3 boards. This way Brian and Cole could then start trying to communicate with our microcontroller. In an effort to further test our board, I also tried soldering a shift register and some 68 Ohm resistors in place of the resistor array in hopes of testing out the LED array. I realized that this probably would not work as well since the resistors are top heavy and are causing some of the pads to fall off of the board. There is also not enough room for the resistors to have a good connection to the pad. I also was able to finish building and testing the amplifier board for the pickup. With the help of Joe, I was able to build an amplifier that filters out some low frequencies and only output waveforms with a high amplitude. The pictures below show waveforms for a low E, a high E, and all strings strummed at once. This is intended to act as our strum detection where the user would have to strum with confidence in order to proceed to the next note. The amplifier circuit was built on protoboard instead of having a spot on the guitar neck due to space allocation on the neck and because the pickup signal is near the bottom of the guitar.
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/amp_pickup.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/lowE_strum.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/highE_strum.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/all_strum.png">
+                  <p style="clear: both;">
+            </div>
             </br>  
 
                       
