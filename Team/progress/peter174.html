@@ -70,7 +70,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li>
                     <!-- <li> <h4> <a href="Team/progress/peter174.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
                 </ul>
             </div>
@@ -357,7 +357,24 @@ contact course staff.
                   <img width="40%" src="Team/progress/img/AustinImg/BM78breakout.png">
                   <p style="clear: both;">
             </div>
+            <br>
             
+            <br>
+
+            <div id="week15">
+                  <h4>Week 15:</h4>
+            </div>
+            <b>Date:</b> 21 April 2017<br>
+            <b>Total hours:</b> 18<br>
+            <b>Description of design efforts:</b><br></br>
+            It took a lot of time trying to troubleshoot and figure out why our first microcontroller was not working. We probed each programming pin with the dev board (since we know that it works) to understand and see what a nominal signal looks like when the microcontroller is talking to the programmer. When we probed our micro on the PCB, PGEC1 was not showing a triangle like waveform similar to PGED1 and MCLR; it looked similar to when the pin was not connected at all (mostly blank with a little bit of noise). There were times where the waveform looked like the programmer tried talking to the microcontroller and it stays in a state where it keeps trying to talk to the microcontroller. With Joe's help, I took measurements of the Vdd, Vss, and Vcap pins to verify that the microcontroller is receiving the correct voltage (which it was). After checking the traces and checking for continuity on the programming pins, we decided to build another board (the finalized design) with a new microcontroller. After adding the microcontroller and the minimum requirement capacitors and resistors, we finally are able to talk to our microcontroller! I can now start soldering the rest of the board so that Brian and Cole can work on getting the LEDs to work. In an effort to get Bluetooth to work, Joe made a flywire circuit on one of our transceivers so that we could use that and a FTDI to simulate communication with the Bluetooth module. I also soldered our Bluetooth module to a breakout board so that we can better test with this device since it will have all of the pins attached instead of having a few pins like how the flywire was set up. We did use our last module for the breakout board, but removing it should not be too much of an issue since we would just have to use solder wick to absorb the solder. Jen started soldering the components on PCB1. Soldering is going to pick up this coming weekend. We might come into problems with the solder bridge pads being too small. We could use strands of wire as the bridge, but we will have to be very careful not to cause any potential shorts. I also purchased a sheet of acrylic that will serve as our protection and face plate for the fretboard, and drew out the shape of the fretboard. Jen then used a Dremel to cut out the face plate. After some filing and sanding, we have a finished face plate for the guitar neck. In addition to building the face plate, I modeled a case that will house the power electronics and amplifier circuit and it will be finished sometime early next week. Ever since we got the microcontroller working, things are starting to look much better for the project. It is going to be a very busy week in order to get this project finished in time for the Spark Challenge.
+            <br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/bluetoothFlywire.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/microTS.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/power_box.png">
+                  <p style="clear: both;">
+            </div>
             <br>
 
             </br>  
