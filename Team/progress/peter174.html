@@ -71,7 +71,7 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/peter174.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/peter174.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li>
-                    <!-- <li> <h4> <a href="Team/progress/peter174.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/peter174.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li>
                 </ul>
             </div>
             <div id="week1">
@@ -377,6 +377,25 @@ contact course staff.
             </div>
             <br>
 
+            <br>
+
+            <div id="week16">
+                  <h4>Week 16:</h4>
+            </div>
+            <b>Date:</b> 2 April 2017<br>
+            <b>Total hours:</b> 50<br>
+            <b>Description of design efforts:</b><br></br>
+            The final stretch before the Spark Challenge. While Brian and Cole worked on debugging and finalizing the code, Jen and I worked on connecting the PCBs together with the solder bridges. Making all of these connections was extremely time consuming and inconsistent because while they would act as an electrical connection, it was too unreliable for a solid connection. When I would work on soldering one side of the wire to the pad, the other would melt off its pad. We used hot glue to make a secure hold for the PCBs and the bridges. I also worked on finishing the packaging of the project. This meant making sure we have enough wire going from PCB3 to the power/amplifier box, securing the amp circuit and power electronics to the 3D printed power box, attaching the power box to the guitar body, and drilling holes into the guitar neck and securing the PCBs to the neck. Once we were finished with the solder bridges, we were able to connect the ICD 3 connector to PCB and program the microcontroller with the software. In the interest of time, we scrapped using a Bluetooth module for the mode selection and used a switch to act as our controller for learning mode and full playback mode. We loaded a test demo that would try to illuminate each LED individually to see which LEDs were connected properly. It turned out that half of the rows of LEDs on PCB1 turned on, none of the rows for PCB2, and all of the rows for PCB3 and PCB4. The reason why none of the LEDs were not on for PCB2 and some for PCB1 were probably due to bad connections from the solder bridges. We also tested and verified the fret detection to make sure that learning mode worked as intended. Jen worked on securing the acryllic fretboard on top of the PCBs. Once everything was attached, we went to restring the guitar and lo and behold the fret board was too high. This was caused by the frets not being completely in a groove on the acryllic and sticking out. We had to do this because acryllic is brittle and cutting a groove into a fret marker would risk snapping of the board at that fret. Another issue was that due to the solder bridge/hot glue on the underside and extra wires from the PCB to the power box, there was a lot more extraneous height added to the fretboard. We tried raising the fret nut to alleviate this issue. It helped on the lower frets, but the higher frets were still touching all of the strings and dampening the sound. All of this made the strings lose all melodic sound. In addition, this caused issues to our code. Due to the fretboard issues, the learning mode operation was very unpredictable; sometimes it worked and sometimes it did not work. This was because of all of the strings touching multiple frets and the software was confused as to when to switch to the next note. Also as a result of final packaging, we lost operation of the LEDs that worked on PCB1 due to the solder bridge breaking. Overall, packaging did not go as expected and caused a lot of issues to the final operation of the project. 
+			<br>
+            <div align="center">
+                  <img width="40%" src="Team/progress/img/AustinImg/guitutar_front.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/guitutar_back.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/guitutar_LED.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/guitutar_pwramp.png">
+                  <img width="40%" src="Team/progress/img/AustinImg/guitutar_solderbridge.png">
+                  <p style="clear: both;">
+            </div>
+            <br>
             </br>  
 
                       
