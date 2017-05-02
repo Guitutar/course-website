@@ -80,15 +80,15 @@ contact course staff.
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week5">5</a> </h4> </li>
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week6">6</a> </h4> </li>
                     <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week7">7</a> </h4> </li>
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week8">8</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week9">9</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week10">10</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week11">11</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week12">12</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week13">13</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week14">14</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week15">15</a> </h4> </li> -->
-                    <!-- <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week16">16</a> </h4> </li> -->
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week8">8</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week9">9</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week10">10</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week11">11</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week12">12</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week13">13</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week14">14</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week15">15</a> </h4> </li>
+                    <li> <h4> <a class="weeklink" href="Team/progress/brieder.html#week16">16</a> </h4> </li>
                 </ul>
             </div>
 
@@ -103,8 +103,8 @@ contact course staff.
             Configuring the computer was a simple but necessary task - we need a terminal to access various Linux utilities and we need an editor to... edit text files (such as those that comprise this website). As such, I installed Cygwin on the lab computer along with a number of utilities that we may need throughout the semester (scp, ssh, bash, etc.). I also installed Sublime Text as a text editor for the team and set configuration so that general formatting (i.e., tabs vs. spaces, tab width) could remain consistent regardless of who was editing the file.
             <br> <br>
             <div align="center">
-            	<img style="float: left;" width="48%" src="Team/progress/img/BrianImg/CygwinInstalled.png">
-            	<img style="float: right;" width="48%" src="Team/progress/img/BrianImg/SublimeConfigured.png">
+            	<img style="float: left;" width="48%" src="Team/progress/img/BrianImg/2_CygwinInstalled.png">
+            	<img style="float: right;" width="48%" src="Team/progress/img/BrianImg/2_SublimeConfigured.png">
             	<p style="clear: both;">
             </div>
             <br>
@@ -128,16 +128,16 @@ contact course staff.
             Additionally, we discussed the flow of operation from a state machine design perspective in order to help him write the Software Overview. I created a state machine for him to work from pictured below that allows transitioning between song selection, mode selection, and the two currently intended modes. Within "LEARNING" mode, I proposed that as long as the song isn't finished, we should display the note, wait for input, and then transition based on the correctness of the note - a process that balances on our ability to turn vibrations from sensors into booleans and perform encoding on notes for analysis. The "REALTIME" mode is significantly simpler and only requires the reading of a note encoding as well as the interpretation of a numeric delay within the same type of 8-bit encoding discussed previously that accompanies every note. The exact implementation details of an encoding aren't set in stone yet, but the necessity has been acknowledged and Cole and I have been exchanging ideas regularly.
             <br> <br>
             <div align="center">
-                <img style="" width="30%" src="Team/progress/img/BrianImg/ExampleEncoding.jpg">
+                <img style="" width="30%" src="Team/progress/img/BrianImg/3_ExampleEncoding.jpg">
                 &nbsp;
-                <img style="" width="30%" src="Team/progress/img/BrianImg/InitialStateDiagram.jpg">
+                <img style="" width="30%" src="Team/progress/img/BrianImg/3_InitialStateDiagram.jpg">
                 <p style="clear: both;">
             </div>
             <br>
             In addition to software design this week, I spent a significant amount of time researching Bluetooth modules for the component report and for our ultimate design. I decided that Serial Port Profile (SPP), a Bluetooth profile that allows connected devices to transmit and receive data as if there was a physical connection between them, was a necessity for our design, as Bluetooth is serving the purpose in our context of replacing a wired serial interface with a wireless one. After a lot of digging, I eliminated all but two Bluetooth modules which are discussed within the component analysis report: the Microchip Technology BM78 and the Silicon Labs BLE113-A-M256K. The BM78 supports SPP, utilizes BM78 and UART, and has an average sensitivity, moderately accessible supply, and the lowest price of the investigated components. The BLE113, however, has an explicitly listed data rate, interfaces with more serial options, and has lower voltage and current supply requirements. The decision has currently been to progress with the BM78, but the advantages of both options still need to be considered as a team.
             <br> <br>
             <div align="center">
-                <img style="" width="60%" src="Team/progress/img/BrianImg/BluetoothChart.jpg">
+                <img style="" width="60%" src="Team/progress/img/BrianImg/3_BluetoothChart.jpg">
                 <p style="clear: both;">
             </div>
             <br>
@@ -155,16 +155,16 @@ contact course staff.
             The primary design efforts for this week shifted away from the theoretical to the physical implementation details of the project. A prime example of this was the consideration of isolation of the bridge from the strings - a design detail that was required to prevent the shorting of the string-fret matrix that would render the device effectively useless. In order to address this issue, we purchased liquid rubber for the purpose of prototyping. As shown in the first image below, we stripped a wire, dipped it in the liquid rubber, let it dry overnight, and ensured that the non-insulated sides were still conductive by powering on an LED and that the rubber-dipped section was non-conductive and did not power on an LED. Despite this approach working, we feared that the liquid rubber would not retain fidelity when stretched and rubbed across the bridge as the guitar was used and tuned. To address this, we considered using heatshrink and, in the process, came across string sleeves designed to reduce string wear that do not audibly dampen vibration and are made of insulating material. As of the time of this progress report, these sleeves are in the mail and will be tested in the next week. These parts are reflected in the Bill of Materials that we completed this week as a team in order to sort our thoughts regarding what parts are necessary to create the project.
             <br> <br>
             <div align="center">
-                <img style="" width="40%" src="Team/progress/img/BrianImg/IsolationTest.jpg">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/4_IsolationTest.jpg">
                 &nbsp;
-                <img style="" width="40%" src="Team/progress/img/BrianImg/FretboardOptions.jpg">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/4_FretboardOptions.jpg">
                 <p style="clear: both;">
             </div>
             <br>
             Another facet of physical design that we considered was the addressing of the mounting of the LEDs inside of the guitar neck. This week while considering how that implementation should be done, the idea that we could simply use a PCB in place of the fretboard came to mind. While this does introduce a slew of potential considerations, this would allow direct contact between the fret and the PCB, reducing wiring down the body of the neck, allow surface mounted LEDs to be seen without drilling out a fretboard, and, as an added bonus, allow the package to have a "tech-chic" look. We agreed that this idea could be the one that we ultimately use for our design, but know that there are several points that need to be considered: moisture, force, ESD, and electrical contact. As a human user would be touching a bare PCB, we discussed several options for isolation including conformative coating, a fret-wise plastic overlay, a custom printed fretboard case, and a full-neck plastic cover. While this decision is not currently set in stone, the use of the PCB as a fretboard with a plastic cover is the current course of action that is being pursued. The other consideration, however, with using the PCB as a fretboard was the cost associated. As a team, we considered the advantages and disadvantages of a full-neck PCB (cohesive unit, functional design, high cost) and of a several PCB fretboard (modular design, requires solder bridges, multiple failure points, lower cost) and ultimately decided on a modular PCB fretboard as cost was a determining factor.
             <br> <br>
             <div align="center">
-                <img style="" width="40%" src="Team/progress/img/BrianImg/DevBoard.jpg">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/4_DevBoard.jpg">
                 <p style="clear: both;">
             </div>
             <br>
@@ -184,7 +184,7 @@ contact course staff.
             From the perspective of honest reporting, Harmony is still an enigma to me that I have to spend more time working with to understand. In the past, all development that I've done has been without a sort of "middleware" layer that performed translation that I'm not aware of. Getting to understand this is going to be a vital part of developing on the PIC32 platform.
             <br> <br>
             <div align="center">
-                <img style="" width="40%" src="Team/progress/img/BrianImg/Dev_LEDProgrammed_Cropped.gif">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/5_Dev_LEDProgrammed_Cropped.gif">
                 <p style="clear: both;">
             </div>
             <br>
@@ -192,7 +192,7 @@ contact course staff.
              This week, we wanted to do an analysis of the neck that we purchased for prototyping and testing. Unfortunately, I realized too late that the guitar neck that we had purchased was a Telecaster neck instead of a Stratocaster neck and we hit our first setback. Mechanically, we looked at two types of guitar: the Stratocaster (the guitar that we're using for this project) and a Telecaster (another Fender-based model that appears similar, but has several design differences. Both types of guitars' necks have a specific heel and bodies' have a specific neck pocket shape: the Strat has a rounded heel and a rounded pocket while the Tele has a flat-base heel and pocket. As shown in the image below, the Strat neck is compatible with both the Strat and Tele bodies, but the Tele neck is only compatible with the Tele body. This was the root of our issue - we'd purchased a Telecaster neck which CAN physically slot into the heel, but would not seat properly without a pocket-base gap and would cause the guitar to not intonate. As such, this experiment was abandoned while we order a proper neck.
             <br> <br>
             <div align="center">
-                <img style="" width="70%" src="Team/progress/img/BrianImg/Heel_Pocket_Comparison.png">
+                <img style="" width="70%" src="Team/progress/img/BrianImg/5_Heel_Pocket_Comparison.png">
                 <p style="clear: both;">
             </div>
             <br>
@@ -209,16 +209,16 @@ contact course staff.
             This week was yet another week of painful attacks on the PIC32MX. I spent an exorbitant amount of time banging my head on the wall with plib.h before realizing in man-lab on Wednesday after talking to Matt that I wasn't utilizing Harmony at all. Once I realized that I had to install and configure Harmony properly to be able to generate code that we could build on top of as to not have to rewrite peripherals such as UART. I removed all of the plib driver work I had done the week before (effectively counteracting 6 hours of progress made in the first half of the week) and began trying to crack into Harmony. After some more discussion on Matt, I came up with a gameplan for how to attack Harmony moving forward and that was my primary point of progress. As of now, the current objective is driving an external LED based on another digital signal indicator. The image below shows the Harmony configurator after it had been run and generated the pinout, code structure, and clock diagram shown below.
             <br> <br>
             <div align="center">
-                <img style="" width="95%" src="Team/progress/img/BrianImg/MPLABHarmonyConfigured.png">
+                <img style="" width="95%" src="Team/progress/img/BrianImg/6_MPLABHarmonyConfigured.png">
                 <p style="clear: both;">
             </div>
             <br>
             In order to work with the Explorer 16 to interface with an external part (such as the previously mentioned LED and switch), I needed to determine what pins would be used on the breakout board, the PICTail Plus. After some discussion with Joe, I came to the realization that the pinout for the PIM that we are using may be different than the pinout that the PICTail plus expects (the MA200011). As such, I tracked down a schematic for the '11 PIM  and the pinout for our specific microcontroller PIM. From there, I talked to Joe and decided that I needed to create a direct mapping from the Explorer's expected pins and the pins from the PIM that we are using so that I could drive specific I/O: for instance, if I wanted to power an LED on Port C's 4th bit from our microcontroller, that output may actually come out on the PICTail Plus's Port D's 4th bit. This mapping is vital for us to be able to drive output during prototyping, but the decisions for what bits are going to be used need to be well-defined in order to continue with the PCB development.
             <br> <br>
             <div align="center">
-                <img style="" width="45%" src="Team/progress/img/BrianImg/Explorer16ExpectedPIM.PNG">
+                <img style="" width="45%" src="Team/progress/img/BrianImg/6_Explorer16ExpectedPIM.PNG">
                 &nbsp;
-                <img style="" width="45%" src="Team/progress/img/BrianImg/PIC32MXPIM.PNG">
+                <img style="" width="45%" src="Team/progress/img/BrianImg/6_PIC32MXPIM.PNG">
                 <p style="clear: both;">
             </div>
             <br>
@@ -233,7 +233,7 @@ contact course staff.
             This was the week of a breakthrough! Once again, I spent an exorbitant amount of time banging my head on the wall with the microcontroller and finally I busted through (albeit my head still hurts from it). I was finally able to create a legitimate GPIO driver using Harmony and drive LEDs through ports on on the microcontroller. At this point, this gives me a lot of confidence in driving the entire LED array (provided that there are no power issues - that's my next prototyping project) and in receiving inputs from the switch matrix. One of the biggest gaps we have to jump over in software now is making Bluetooth work and formalizing our software development (more on that further down).
             <br> <br>
             <div align="center">
-                <img style="" width="33%" src="Team/progress/img/BrianImg/GPIOCircuit.jpg">
+                <img style="" width="33%" src="Team/progress/img/BrianImg/7_GPIOCircuit.jpg">
                 <p style="clear: both;">
             </div>
             <br> 
@@ -241,9 +241,9 @@ contact course staff.
             As for the progress made by this, not only did this give us experience in doing this if we want to do it to another neck, but it also allowed us to see the physical position of the truss rod in relation to the fretboard. Since it has been a concern throughout the entire course of this project that we would not have space underneath the fretboard to do any machining, seeing the distance from the truss rod to the surface was reassuring to say the least. At this point, we're getting ready to remove the frets and should be well on our way to creating a functional prototype once the PCB is done.
             <br> <br>
             <div align="center">
-                <img style="" width="28%" src="Team/progress/img/BrianImg/IroningGlue.jpg">
+                <img style="" width="28%" src="Team/progress/img/BrianImg/7_IroningGlue.jpg">
                 &nbsp;
-                <img style="" width="50%" src="Team/progress/img/BrianImg/RemovedFretboard.jpg">
+                <img style="" width="50%" src="Team/progress/img/BrianImg/7_RemovedFretboard.jpg">
                 <p style="clear: both;">
             </div>
             <br>
@@ -252,6 +252,141 @@ contact course staff.
             And, Matt, if you're reading this -- I'm sorry for the crazy amount of detail in that paper!
             
             </br>
+
+            <div id="week8">
+                <h4>Week 8: </h4>
+                <b><a href="Files/docs/P1_MidtermDesignReview.pdf">Midterm Design Review</a></b>
+            </div>
+
+            <div id="week9">
+                <h4>Week 9:</h4>
+            </div>
+            <b>Date:</b> 10 March 2017 <br>
+            <b>Total hours:</b> 7 <br>
+            <b>Description of design efforts:</b><br>
+            Since this was only a partial week with travel interspersed, this was, unfortunately, not the most productive week we've had so far. Despite this, however, we were able to progress and pivot quite a bit within our hardware design due to the feedback that was given to us at last week's midterm review. Per Prof. Meyer's advice, we moved from using a piezoelectric detection element to the utilization of the inductive pickups built into the guitar as shown below. In order to test this theory, I was able to hook up an oscilloscope to a physical connection on the guitar with common ground to the inductors to see what kinds of signals would come across. I found that the signal was fairly weak, so in order to sense this I believe we'll need an amplifier to bring it up to a reasonable level - this is prototyping that will have to continue in the future. I was also able to construct a circuit to test the GPIO aspects of the shift register as shown below, but it is currently waiting for me to write a program in order to test it - this is a prototyping step that is currently in process.
+            <br> <br>
+            <div align="center">
+                <img style="" width="33%" src="Team/progress/img/BrianImg/9_PickupOutputTest.jpg">
+                &nbsp;
+                <img style="" width="33%" src="Team/progress/img/BrianImg/9_ShiftRegisterTestCircuit.jpg">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            From a software perspective, Cole was able to progress further with the application design and we're beginning discussions about trying to figure out how to interface the phone with the Bluetooth controller. We have a well-defined plan moving forward and hope to counteract the lull caused by spring break: embedded software (me) will continue with the development of a shift register and note decoding prototype, remote software (Cole) will begin breaking down the application itself along with the design decision that we made this week, and then we will have to determine how to perform song transmission will occur over Bluetooth before we can continue with the actual operation design and integration in fabricated hardware. There's still a lot to be done and it may require a sprint, but we have it all laid out in front of us.
+
+            <div id="week10">
+                <h4>Week 10: </h4>
+                <b>Spring Break</b>
+            </div>
+
+            <div id="week11">
+                <h4>Week 11:</h4>
+            </div>
+            <b>Date:</b> 11 April 2017 <br>
+            <b>Total hours:</b> TBC <br>
+            <b>Description of design efforts:</b><br>
+            This progress report was completed retrospectively due to delay from an excused absence. All attempted recollections and hour estimates for this report are done to the best of my ability and are exactly that: attempts and estimates.
+            <br><br>
+            Due to the previously mentioned absence, I was absent from working for the second part of this week. Up to that point, however, I had continued prototyping with the Explorer 16 and was unable to move forward with the shift register circuit this week due to some pin driving issues. This week I'd had some serious conversation with Joe regarding how I should be driving our shift registers as they were SPI compatible. I ultimately decided that, instead of using SPI, I'd circumvent the nightmare that Harmony had been and simply bit-bang the entirety of the process. In order to do so, though, I needed to ensure that every pin was able to be driven. This is where most of my time was spent: I used a lot of time debugging the circuit to determine which pins were actually useful to me and ultimately switching around ports and bits to finally drive an LED circuit. Our team also received the PCBs this week, but made a fairly saddening decision. The stamp board, pictured below on the left, that was created by Austin and Jen was deemed to not even be useful to our team - since we had the project board and the stamp board at the same time, it seemed like an unnecessary intermediate step to deal with the stamp board. This was a lot of wasted time, especially given how long it took the two of them to complete, but I'm thankful to have the project boards (for the most part) correct.
+            <br> <br>
+            <div align="center">
+                <img style="" width="33%" src="Team/progress/img/AustinImg/stampboard.png">
+                &nbsp;
+                <img style="" width="33%" src="Team/progress/img/AustinImg/pickup_amp.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            Austin was able to progress further with the pickup strum-recognition process, something that I'm not familiar from via an analog perspective, but something that we decided this week should return something Boolean to me in order to determine when switches should be read. The image to the right is the circuit that Austin began to work with which was still a work in progress during Week 11. Outside of the progress, the issues that I had with bit-banging still worry me, actually, as the resolution was to simply switch pins. The potential issue, though, is that on the PCBs the connections are hard-wired - there's no changing the wiring that is currently in place while maintaining the appearance of the device. Even as this progress report is being written, there's some uneasiness that's taking place that can only be resolved by the progression of the project.
+
+            <div id="week12">
+                <h4>Week 12:</h4>
+            </div>
+            <b>Date:</b> 11 April 2017 <br>
+            <b>Total hours:</b> 4 <br>
+            <b>Description of design efforts:</b><br>
+            This progress report was completed retrospectively due to delay from an excused absence. All attempted recollections and hour estimates for this report are done to the best of my ability and are exactly that: attempts and estimates.
+            <br><br>
+            Once again, due to the previously mentioned absence, I was gone for the very beginning of this week (up to Monday) and for the very end of this week (Thursday onwards) meaning that I only had two accessible work days: Tuesday and Wednesday. This meant that there was a significant drop in productivity for me simply because I was dealing with a rough schedule and happenstance. Most of my work fell on the creation of the libraries that were completed by Week 13 - creation of the encoding structure and the display structure. The board that I completed in Week 9 was finally incorporated into the prototyping process, meaning that we were able to begin incorporation of the shift register in tandem with the LEDs. This caused some strange looking clock signals that had around 8 different amplitudes. Ultimately, I wasn't able to complete this prototype and this was done when I came back in Week 13. Some of these wavering signals are shown in the image below and to the right.
+            <br> <br>
+            <div align="center">
+                <img style="" width="25%" src="Team/progress/img/BrianImg/9_ShiftRegisterTestCircuit.jpg">
+                &nbsp;
+                <img style="" width="53%" src="Team/progress/img/BrianImg/12_SwitchClock.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            Before I left, I'd attempted to discuss with Cole how we could hand off some of the work for the short term in the following weekend, but that handoff ended up landing on its face simply because of the disconnect that the team has working on software - it's me who handled this part so the work that needed to get done fell on me, my absence meant that it didn't progress. I don't view this as anyone's fault but my own, albeit its cause rooting from something you just can't predict. Just goes to show that it's a necessity to keep a team up to date at all times in order to allow preparation for the unforeseen.
+
+            <div id="week13">
+                <h4>Week 13:</h4>
+            </div>
+            <b>Date:</b> 7 April 2017 <br>
+            <b>Total hours:</b> 7 <br>
+            <b>Description of design efforts:</b><br>
+            Due to a significant life event, the past couple weeks have been drastically slowed down for me as far as work progression has gone. Because of this, my previous two progress reports are backlogged - causing the later date of writing on the previous two reports. Taking this in stride, however, I'm trying to get my portion of the project back on track, as software development stopped entirely while I was gone. As of the beginning of this week, note decoding and display was in progress, Bluetooth was still a pending issue that Cole and I need to collaborate on from either side. Right now, my primary priority is to meet the note display and input PSSCs - a task I was able to make significant progress on.
+            <br> <br>
+            <div align="center">
+                <img style="" width="63%" src="Team/progress/img/BrianImg/13_NoteDecoding.gif">
+                &nbsp;
+                <img style="" width="33%" src="Team/progress/img/BrianImg/13_LibraryCode.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            As shown in the GIF above, we are able to trigger a note change based on a switch input. The purpose in this is to show that based on a trigger, we are able to move from one note to the next, a process emulating a "correct note" input. This means that the display trigger interface is independent enough that a boolean "correct/incorrect note" signal can determine note transitions. In addition to this, a library for note display and storage was created in the (albeit small) image to the right of the GIF. Because of this library, we are able to enter a chord or a note to display and it will decode to display on the LEDs. For instance, the number 168, which decodes to 101010 followed by two 0's, will display on the first, third, and fifth string. As of now, this means that the note decoding is working properly, but the fret decoding to the proper pins needs to be completed. Austin constructed most of a prototyping PCB this week that's completely independent from the Explorer 16 which means that we can finally start to attempt to drive specific frets from the pins that are assigned to them in the layout. As of now, we have a significant amount of work that still needs to get done, so we're on a long term spring up until the Spark Challenge - it's tough to stay positive about the timeline, but we have to keep driving forward.
+
+            <div id="week14">
+                <h4>Week 14:</h4>
+            </div>
+            <b>Date:</b> 14 April 2017 <br>
+            <b>Total hours:</b> 7 <br>
+            <b>Description of design efforts:</b><br>
+            This is another week that was unfortunately met with setbacks. Development on Bluetooth was started, so Cole and I dove right in and tried to figure out all of the pieces that we were missing. While I had some idea that there may be an issue with it, I looked into the Bluetooth Stack development library within Harmony and found that it would do a lot of the configuration for us. The unfortunate news here, though, is that the library only supports specific chips, so we're forced to use USART for all of our communication to the Bluetooth controller and we must figure out how to do all of the configuration manually. Not only this, but I found out that there was a recommended chip for Bluetooth by the course staff that we have development boards in-house for that does not match up with the BM78 that we're using. This meant that in order to continue the Bluetooth development process, we needed to get our chip on a custom fitted board. I talked to George and he said there was a possibility that we could get a board quickly fabbed on the circuit board mill on campus - Austin then drew up the schematic below and we sent it out to him. Just this afternoon, however, George got back to us and let us know that the mill was out of commission, so we have to send this board out for fabrication in order to progress. At the moment, we're waiting on that, but I'm beginning to think more and more every day that we may just want to throw the chip onto a protoboard and see if we can debug it that way. Regardless, the entirety of the Bluetooth stack is foreign to me, so I'm continuing to do some basic research online and asking other teams how to approach this - ultimately, I think it would be a good idea to meet with George or Matt to discuss how to work this in. The fact that Bluetooth for the micro is residing solely on me stresses me out without a doubt, but I've got to get it working.
+            <br> <br>
+            <div align="center">
+                <img style="" width="33%" src="Team/progress/img/AustinImg/BM78breakout.png">
+            </div>
+            <br> 
+            I'd be lying if I said I wasn't worried this week. We're getting down into crunch time and some of the essential pieces are still missing - some of these mine, some of these belonging to others. Regardless of what happens, though, we need to keep persevering through this and making sure that we're actually going to get to the point that we have a presentable product. There's not much else I can actually do other than keep working as the parts keep coming and to try to get this project to a presentable state from a software perspective. Once Bluetooth works on a completed board, wer'e in clear - we've got the PSSC requirement completed and we can work to polish off and make a presentable project, ideally by Spark Challenge.
+
+            <div id="week15">
+                <h4>Week 15:</h4>
+            </div>
+            <b>Date:</b> 21 April 2017 <br>
+            <b>Total hours:</b> 14 <br>
+            <b>Description of design efforts:</b><br>
+            This week had two primary fronts that I was fighting on and I, unfortunately, can't bring any good news into the progress report at this time. In order to satisfy PSSCs, we need to make Bluetooth work and put everything that we currently have into the finalized unit, so the two facets of the week were driving forward development on Bluetooth and getting the microcontroller programmed. As I mentioned last week, we sent in a board per George to get fabricated in order to start the Bluetooth development process. When I talked to Joe this week, however, he indicated that we could start the development process sooner by simply flywiring the dev board as shown in the photo below on the left. This meant yet another wasted effort (and money...) in creating the Bluetooth breakout board from last week - which, at the time of this report, has come in along with all of the project PCBs that are currently waiting to be soldered together. Regardless, though, this means that we're able to start communicating with the computer via TerraTerm to determine what kind of configuration needs to be done to pair with a phone and then to progress to replicating that process from the microcontroller. That microcontroller replication brings me to a whole other issue...
+            <br> <br>
+            <div align="center">
+                <img style="" width="48%" src="Team/progress/img/BrianImg/15_BluetoothFlywire.jpg">
+                &nbsp;
+                <img style="" width="48%" src="Team/progress/img/BrianImg/15_MicroProgramming.jpg">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            We can't program the microcontroller! We hooked up the ICSP interface to the microcontroller as shown in the second photo above and the device wasn't receiving the proper voltage. After some handy debugging and voltage supply from both our signal generator and the ICD 3, we were able to allow the micro to receive the proper voltage, but the Device ID isn't recognized. Until we get resolved, this is a serious, serious obstacle that we need to overcome - so much so that we've been working at it for now two days with no result. We're continuing debugging, but I fear that this is going to be a crippling setback as we move forward. If we're able to get this to program by the Monday following this progress report, I believe I can cobble together a "working" version by Spark Challenge, but that's a big wall to overcome. Regardless, in order to test the programming process, I wrote up a small sample program that will toggle the LEDs on the board to ensure that shift register and hacked resistor array work correctly and to prove that programming worked properly - this means that when we're finally able to get it to program, we'll know immediately and can start further expanding on the framework we have in place. This is going to be a rough next week...
+            <br>
+            <div align="center">- - - - -</div>
+            Post-original authoring update! As of the end of the day on Friday, we are, in fact, able to program the final board! This is after the entire day debugging with Joe and Austin and finally putting together another board with a new microcontroller that we programmed with the same interface. We decided that the ultimate issue was a missing decoupling capacitor or just simply a burnt out old micro. As of now, we're able to program the microcontroller and development on the final board can continue for demonstration - this means we've got PSSC 3 covered. There are some quirky issues with the device not programming correctly on the first try (issues with wiping it), but with diligence we're able to get it to work every time we make a change. Progress!!!
+            
+            <div id="week16">
+                <h4>Week 16:</h4>
+            </div>
+            <b>Date:</b> 29 April 2017 <br>
+            <b>Total hours:</b> 45 <br>
+            <b>Description of design efforts:</b><br>
+            So, it's the final week. We sprinted up to the Spark Challenge, stayed awake for 36 hours, and saw how far we could get. At the end of the day, we were able to put all four boards together, we were able to display all of our notes, we were able to take user input from a strum, from a fret press, and from both at the same time, and we were able to operate in two modes. All of the parts worked individually, all of the parts worked when they were put together. But, in typical fashion, when we put it in the packaging, everything broke! We believe this was likely due to a short underneath the board or interference due to the raised fretboard causing connections with the strings, but as of right now we're not sure and we'd have to tear down the entire project to figure out what was going wrong with it as a whole. For the sake of time, the presentation, the video, and the archive (along with work from all of our other classes), we've decided to put the project down and accept the hand we've been dealt. 
+            <br> <br>
+            <div align="center">
+                <img style="" width="40%" src="Team/progress/img/BrianImg/16_Assembled.jpg">
+                &nbsp;
+                <img style="" width="30%" src="Team/progress/img/BrianImg/16_Running.gif">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            Ultimately, after a lot of discussion with Austin, he and I agreed that this really came down to the constraints of our project causing issues with timing and physical implementation. Not only were we working with many of the other challenges that teams faced as we all continued working, but the entire semester we were plagued with working around the form factor of our design - we tried to fit everything in the space and shape of a fretboard for crying out loud! It's sad to have everything end on such a low <i>note</i>, but I suppose we shouldn't <i>fret</i>. There's a <i>light</i> at the end of the tunnel and a lot that we <i>learned</i>. So long and thanks for all the fish.
+           
+
 
         </div>
 	

@@ -62,16 +62,16 @@ contact course staff.
                     <li> <h4> <a href="Team/progress/jisaza.html#week4" style="text-decoration:none">&nbsp;4</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/jisaza.html#week5" style="text-decoration:none">&nbsp;5</a> </h4> </li>
                     <li> <h4> <a href="Team/progress/jisaza.html#week6" style="text-decoration:none">&nbsp;6</a> </h4> </li> 
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> -->
-                    <!-- <li> <h4> <a href="Team/progress/jisaza.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li> -->
+                    <li> <h4> <a href="Team/progress/jisaza.html#week7" style="text-decoration:none">&nbsp;7</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week8" style="text-decoration:none">&nbsp;8</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week9" style="text-decoration:none">&nbsp;9</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week10" style="text-decoration:none">&nbsp;10</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week11" style="text-decoration:none">&nbsp;11</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week12" style="text-decoration:none">&nbsp;12</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week13" style="text-decoration:none">&nbsp;13</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week14" style="text-decoration:none">&nbsp;14</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week15" style="text-decoration:none">&nbsp;15</a> </h4> </li> 
+                    <li> <h4> <a href="Team/progress/jisaza.html#week16" style="text-decoration:none">&nbsp;16</a> </h4> </li>
                 </ul>
             </div>
             
@@ -239,15 +239,183 @@ After adding these changes and dividing the PCBs, I began preparing for the layo
       
             </div>
             <br><br>
-          
-                      
+ </br></br>	
+            <div id="week9">
+                  <h4>Week 9:</h4>
+            </div>
+            <b>Date:</b> March 10, 2017 <br>
+            <b>Total hours:</b> 12 <br>
+            <b>Description of design efforts:</b><br>
+          This week focused on finishing and ordering the stamp board and making necessary changes for the PCB3 in order to move onto the other PCBs. One of our main problems with PCB progress has been the problem that all of the other PCBs depend on PCB3. We have made constant changes to PCB3 which changes where the traces to the other PCBs will go. Some additions we made to the PCBs these past two weeks were the addition of through-holes for the fret connections, adding a ground plane to avoid excessive vias, and extending and mapping out all traces from the micro to the edges of the board. After talking to a TA, we discovered that we had been using the most basic layout for our PIC32, and that we would need many additional capacitors on both our stamp board and our micro. The stamp board was updated within the day and was ordered with the appropriate layout. 
+<br><br>
+<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/Week9_fret.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+The presentation from Week 8 brought up a lot of concerns for this week. Most of the problems that our audience brought up concerned the hardware, which will change our PCB. One concern was the shift registers, which currently require the use of a resistor packes which takes up more room than the shift register itself. To avoid this problem, Prof. Meyer suggested using a current limiting shift register, which uses I2C instead of SPI, and would not require us to include resistors for the LEDs. While this initially sounded like a good solution, our micro only has two I2C pins, which can handle eight shift registers each. In order to fit the other shift registers, we would have to add a mux, which would probably end up taking up as much room as the resistors. This solution would probably save some room, but the redesign efforts to change around pins and traces would not be worth the hassle to save this questionable amount of room, unfortunately. Other concerns from Joe mainly had to do with power. Although we are planning on covering the PCB with plastic sheeting in order to protect it from static shock, we did not think about the static that would come through the frets while the user is playing. The solution to this problem would be to add a network of 330 kohm resistors and enable the internal pull up resistors of the micro by enabling the CNPUx and disabling the CNPDx, which would protect against up to 4950V. Another option that we are adopting is getting rid of the Piezo and using the internal inductive pickup of the guitar itself. The Piezo would have been too difficult with the outside vibrations from knocking into the guitar or being in loud spaces. By using the inductive pickup of the guitar, we will be able to filter the frequencies of sound that we want to recognize, so that outside vibrations will not give us a false positive for a strum. The last addition we will make is an LDO that will step down the 5.2V from the battery to the 3.3V for the microcontroller. 
+<br><br>
+<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/Week9_PCB.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+Future considerations for our PCB design will be finding the right sized pads for the PCB to PCB connections and the correct sized holes to attach the frets to the micro. George got us on the right track by introducing us to the "jumper" library, but these jumpers even look too large to connect PCB3 to PCB2 especially, since there are so many traces to connect. 
+         <br><br>
+ </br></br>	
+            <div id="week10">
+                  <h4>Week 10:</h4>
+            </div>
+            <b>Date:</b> March 17, 2017 <br>
+            <b>Total hours:</b> 0 <br>
+            <b>Description of design efforts:</b><br>
+            Spring Break
+<br><br>
+ </br></br>	
+            <div id="week11">
+                  <h4>Week 11:</h4>
+            </div>
+            <b>Date:</b> March 24, 2017 <br>
+            <b>Total hours:</b> 18 <br>
+            <b>Description of design efforts:</b><br>
+            Before leaving for spring break, Austin was able to submit our PCB3 and make the necessary changes for ordering. Our PCB3 and stamp board are now here, and we will be able to begin soldering for testing and programming of the PIC32. Before soldering, we will perform tests on some of the traces and pads that seem too close and could have been shorted. 
+            </br></br>	
+            <div align="center">
+            	<img style="float: left;" width="50%" src="Team/progress/img/JenImg/week11_stampboard.png">
+            	<img style="float: right;" width="50%" src="Team/progress/img/JenImg/week11_pcboard3.png">
+            	<p style="clear: both;">
+            </div>
+            </br></br>	
+
+            This week, I have been working to finish PCB2 and have its connection pins on either side line up with PCBs 1 and 3. Since 3 has already been ordered, I lined up the correct pins with PCB3, and had to change some of the pin order for PCB1. One change for the week is deciding what value of resistance network will be necessary for operation. Earlier, we chose a package that was already in the Eagle database as a sort of "filler" until we figured out other specifications. Since the shift register will output 3.3V and the LEDs need 2.65V at around 10mA, we decided that we would need around a 65Ohm resistor network. Unfortunately, the resistor network package on PCB3 does not come in 65Ohms, so we decided to use the closest value at 100Ohms. Fortunately, I was still able to change the other PCBs and found much smaller resistor networks at 65Ohms that will greatly help out with space conservation. PCB2 is now completed and I need still need to make small connector changes to PCB1 as well as switch out the old resistor packages for the new ones. 
+
+            <br><br>
+			<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/week11_work.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+            We are mainly focusing on PCBs 1, 2, and 3, because these are the PCBs that will be used the most by the user. In order to meet our overall goals, it will be in our best interests to make these three work as a minimum and then move on to PCBs 4 and 5 if there is time. These two boards will pose more challenges due to the increasing amount of frets on the upper half of the neck and the increased connections and shift registers that accompany these frets. 
+
         </div>
+
+</br></br>	
+            <div id="week12">
+                  <h4>Week 12:</h4>
+            </div>
+            <b>Date:</b> March 31, 2017 <br>
+            <b>Total hours:</b> 15 <br>
+            <b>Description of design efforts:</b><br>
+This week was mainly spent fixing errors with the PCBs. I finished switching out all of the resistor packages for the smaller 68Ohm ones and redid all of the traces for PCBs 1,2, and 3. On Wednesday, I realized that the PCB3 we ordered had an error on it that was, unfortunately, unfixable. I added connections for SCK, SCLR, and RCK because they were not added to the board and I also changed the dimensions to the PCB. This weekend, we will need to double check more of the dimensions so we don’t have to reorder any more boards. If we have time, we will start on PCB4 and 5. However, we would like to have the first three PCBs functioning first so that we will have a fully working project for our goals. Cutting the PCBs is another challenge that we faced this week. Austin tried cutting one of the PCBs for practice, and learned that we may need to put more room on either sides of the areas that we need to cut. There is a more exact saw in the AFL lab that I have used before that may be more accurate. 
+
+		<br><br>
+			<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/week12_PCB1.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+		<br><br>
+			<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/week12_PCB2.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+		<br><br>
+			<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/week12_PCB3.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+
 	
+
+    
+	</div>
+</br></br>
+	    <div id="week13">
+                  <h4>Week 13:</h4>
+            </div>
+            <b>Date:</b> April 7, 2017 <br>
+            <b>Total hours:</b> 15 <br>
+            <b>Description of design efforts:</b><br>
+This week mostly consisted of finalizing the PCBs for me. I had to do a lot of rework on traces and measurements since we needed to make sure that our final PCBs would all align as planned. The pins on the outer edges of each PCB had to be double checked in order to make good connections and DRC changes were made in order to move any wires that were too close. Even though we may have been able to work with our original PCB3, we decided to redo the PCB3 design after we realized that we needed to add shift register traces on either side for G, RCK, SCK, and SCLR. Additionally, we would have had to use different, larger 100 Ohm resistors for PCB3 compared to the newer, smaller 68 Ohm resistors that we will be using for the other PCBs. After completing most of the work over the weekend, a GitHub error deleted all of our work, so I redid all of the PCB work while Austin moved forward with hardware design. He worked to get the amp working with the circuit below and collected all of the parts from Joe that we would be able to use while we wait for our ordered parts. 
+	    <br><br>
+	    <br><br>
+	    		<div align="center">
+            	<img style="image-orientation: 90deg;" width="70%" src="Team/progress/img/JenImg/week13_amp.png" class="rotate90"> 
+      
+            </div>
+            <br><br>
+The PCBs are now ordered and all of the parts that Joe did not have in his inventory have also been ordered. Our next steps are to practice cutting on the PCBs that we already have in order to get a smoother line when our new PCBs come in. In order to make the cutting process easier, we made sure to move the PCB layout so that there is more room on either side for cutting. Austin also decided to work on developing PCB4 in case we decide that we want to expand our design further up the guitar for more experienced users. Another major step we made this week was from Brian on the software side. After having trouble with the clocking signal output and the libraries, he was able to display the correct LEDs on the stamp board provided to us. There is a lot of promise for development of both hardware and software next week after this week of troubleshooting!
+ 	    </br></br>	
+            <div align="center">
+            	<img style="float: left;" width="35%" src="Team/progress/img/JenImg/week13_PCB1.png"> </img>
+            	<img style="float: right;" width="35%" src="Team/progress/img/JenImg/week13_PCB2.png"> </img>
+				<img style="float: right;" width="35%" src="Team/progress/img/JenImg/week13_PCB3.png"> </img>
+            	<p style="clear: both;">
+            </div>
+            </br></br>	
+            <br>
+	    <div id="week14">
+                  <h4>Week 14:</h4>
+            </div>
+            <b>Date:</b> April 14, 2017 <br>
+            <b>Total hours:</b> 15 <br>
+            <b>Description of design efforts:</b><br>
+          	This week was a break from our normal PCB routine, since we were able to order all the PCBs last week. Since the PCBs still have not come, the hardware side has been at a bit of a standstill. Developing the Bluetooth module has been one of our main priorities for the team, since this feature is what decides if we can actually use the app that Cole has been developing or not. Since we need a breakout board in order to communicate with the Bluetooth module, Austin created one in Eagle that has been separately ordered. We made sure that the measurements would align with a breadboard, making each side a factor of 0.5in away from the other. This week's assignment is the user manual, which I am responsible for completing. One of the challenges for the user manual was creating a visual of what our system might eventually look like. The user manual has brought up a lot of user feature considerations that we had not thought of previously. Some of these features include a power button, designing a pack that will store the powerBoost and battery, figuring our where and how to attach this power pack, and how power and aux wires are going to connect to the PCBs. These considerations are smaller goals outside of our PSSCs, but would help in a real-world setting where a user may try to use our product. We are hoping that the PCBs and Bluetooth breakout boards will come next week in order to make progress with the software design. We only have two more weeks until the SparkChallenge, so these PCBs are really going to make a difference in whether we will be able to participate or not. 
+			 <br> <br>
+            <div align="center">
+                <img style="" width="70%" src="Team/progress/img/JenImg/week14_drawing.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+             </br></br>	
+            <br>
+	    <div id="week15">
+                  <h4>Week 15:</h4>
+            </div>
+            <b>Date:</b> April 21, 2017 <br>
+            <b>Total hours:</b> 18 <br>
+            <b>Description of design efforts:</b><br>
+          	This week was much more productive compared to last week! I began preparing the fretboard for layout out the PCBs and all of the PCBs came in the week to be worked on. For the fretboard preparation, I cut the acrylic overlay with a dremel saw and sanded out the sides. I still have to make incisions to the side for each fret connection. I also removed all of the metal frets from the fretboard that we already removed. While Brian and Cole continued working on connecting with the micro and Bluetooth, I began prepping PCB1 with all of the necessary parts. Joe made a breakout board for the Bluetooth module, so I figured that PCB1 would be the most useful for future testing with the Bluetooth. Communicating with the micro has been an ongoing frustration for the team in order to move forward. Austin may have figure out the problem when he was resoldering the new PCB3 with the necessary capacitors and resistors for the basic micro circuit. We may have forgotten to solder one of the necessary capacitors onto the test micro circuit, which could explain the micro not functioning properly even when the power pins were reading correctly. My next challenge with the PCBs will be soldering the new resistor arrays onto the PCBs. Although soldering has a quick learning curve, these resistor arrays require the microscope since they are so small, which could present its own problems. 
+			 <br> <br>
+          	}
+            <div align="center">
+                <img style="" width="70%" src="Team/progress/img/JenImg/week15_acrylic.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+            <div align="center">
+                <img style="float: left;" width="50%" src="Team/progress/img/JenImg/week15_PCB1_side1.png"> </img>
+            	<img style="float: right;" width="50%" src="Team/progress/img/JenImg/week15_PCB1_side2.png"> </img>
+                <p style="clear: both;">
+            </div>
+            <br> 
+             </br></br>	
+            <br>
+	    <div id="week16">
+		<h4>Week 16:</h4>
+            <b>Date:</b>28 April 2017<br>
+            <b>Total hours:</b> 40<br>
+            <b>Description of design efforts:</b><br>
+            This week, we saw the most progress out of any week so far. Much of the hardware development was finalized in order to program the guitar neck. After having issues with the VCAP voltage, we replaced the micro only to find that we were having the same problems. Austin figured out that these high voltages were happening because the VSS was not grounded. Another problem we were having was the 3.3V LDO was outputting 4.6V instead of 3.3V with a Vin of 5.2V. After trying different possible solutions and reading the data sheet, we discovered that the Adj pin that we were not using needed to be grounded instead of not connected. Austin made a 3D printed box for all of the power components and amplifier that we velcroed to the back of the guitar, as well. A few further problems that we were having with LEDs not lighting up were solder issues with the tiny 68Ohm resistors we are using. Most of these issues were cold solder joints that were made out of hesitation to avoid shorting the resistors. After these fixes, we moved onto the solder bridges between PCBs which was probably the most difficult step in the whole process. These solder bridges would come loose whenever they were moved and they had to be hot glued down to give extra support. Brian made a code for LED checks that would scroll through each LED on the fretboard. PCBs 1 and 4 had the most LEDs that would not light up, which we assume is from the solder bridges (but we cannot be sure yet). Code for the user mode worked when the fret board was not attached to the acrylic top layer. When the fretboard was attached to one fret externally and we would strum one string while touching the fret, an LED would change as planned. However, when the whole fretboard was put together and each fret was connected to the PCBs, this user mode would no longer work. We still need to do some tests as to why this is happening, but we can tell that something is shorting when pushing down on the frets, since the full playback mode will restart when a user pushes on a fret. Another concern is that the fretboard is too high when everything is put together and the guitar is strung. The strings touch all of the frets when strung, so that only the top note of every string is detected. Future work that will be needed is trouble shooting some of the LEDs, working on lowering the height of the total fretboard, figure out what could be shorting the guitar when a fret is pushed, and getting Bluetooth to work. 
+	    <br> <br>
+            <div align="center">
+                <img style="" width="70%" src="Team/progress/img/JenImg/week16_guitar.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+             </br></br>	
+	    <br> <br>
+            <div align="center">
+                <img style="" width="70%" src="Team/progress/img/JenImg/week16_solderbridge.png">
+                <p style="clear: both;">
+            </div>
+            <br> 
+             </br></br>	
+
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 		<div id="footer"></div>
-    </div>
-</div>
-
 <!--JS-->
 <script src="js/jquery.js"></script>
 <script src="js/jquery-migrate-1.1.1.js"></script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 This is an example weekly progress report document that team members can use to report their individual progress 
 of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
@@ -127,13 +127,81 @@ contact course staff.
             This week the team and I removed the fretboard from a guitar neck that we are using as a test subject. The fretboard is mounted onto the neck of the guitar soley by powerful woodglue. In order to remove the fretboard, the glue had to be weakened substantially. Through hours of research, we noticed the most often method used to weaken the glue was to use a clothing iron to heat and disolve the glue via steam. I brought an iron and towel to our lab and we started work on removing the fretboard. We made some progress after an hour, but it seemed slow. The iron was having an issue laying flush with the fretboard therefore the heat transfer had high amounts of dissipation before arriving at the glue. We dug deeper into research and came upon the idea to use a heat gun to get the glue to high temperatures. The heat gun made with the assumption that contact will not be made with the material that is desired to be heated. This solved our problem of the iron not laying flush, as the iron's design was made assuming that any material it was heating would be laid flush against its surface (ei clothes). The heat gun also was able to go to MUCH higher temperatures than the iron. The iron maxed out around 400 degrees fahrenheit, while the heat gun was able to surpass 1000 degrees fahrenheit. We set the heat gun to 750 degrees fahrenheit and continued on our way. We instantly noticed a large imporvement on the speed of our process and were able to do double the removal in half the time compared to the iron. When we finished removing the fretboard, there were artifacts of the two processes and their effeciencies in the form of how it left the wood. The places were we had used the iron were looked damaged and had traces of left over glue because it was not heated all the way. On the other hand the places where the heat gun was used, the wood looked smooth and finished as if it had almost never been glued at all.
             <br>
             <div align="center">
-            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/BrianImg/RemovedFretboard.jpg"> 
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/BrianImg/7_RemovedFretboard.jpg"> 
             </div><br>
             Secondly, the software formalization was due this week for the group. Brian and I are mostly responsible for the software components of the project, so I worked closely with him on finalizing our software design and definitions. We met to discuss topics like song endcoding/decoding, device commutication, storage design, and more. To go in depth on an example, say storage design, we worked on where and how we wanted to store all the information. The first issue was storing all songs. This was an obvious choice as we know a phone's flash memory tends to be fairly large, so we decided to pull from there in order to reduce requirements on our hardware design. Second we discussed storage of the active song. We had two ideas. One idea was we would have the phone send note data to the microcontroller note by note in real time, only storing only a four to 10 bytes at a time within the microcontroller at a time. The other idea was to transfer an entire song's information to the microcontroller before the song could be played as a psuedo download/install mechanic. The primary benefit of the first method was reduced storage, where its downside was increased requirement on quick and uninterrupted communication. The second method's pros were that real time playing of songs was not reliant on continuous communication between the devices, however its cons were increased storage requirements. After some discussion, we decided that storage would never be an issue with the given memory on the PIC microcontroller already. With the only con on the second method's list removed, the loading method seemed to be the better option.
             </br>
 
             <br>
-                      
+
+	    <h4>Week 8:</h4>
+            <b>Date:</b>10 Mar 2017<br>
+            <b>Total hours:</b> 10<br>
+            <b>Description of design efforts:</b><br>
+            After just finishing the midterm design review and spring break coming up, the team split up work to make adjustments from our evaluation feedback. Being the one that is mainly responsible for the phone app, I got back to working on more practical and technical components for it. To remove the requirement of the microcontroller having to store data in flash memory, we are going to use the phone's harddrive to store all song information to then be transfered to the microcontroller at time. In order to do this, two important pieces are required. One is a database in which to store the song information, and two is Bluetooth communication to transmit the data of a song. This week I worked on the former and have set up a database in which the songs can be stored on the phone. The database will allow for all the information like song name, tempo, notes, and highscores to be saved and retrieved as a whole. This will help promote effeciency when isolating the data for one individual song compared to methods like saving the data within a file that is not controlled by a structural scheme.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/ColeImg/DatabaseContract.png"> 
+            </div><br>
+            <br>
+
+
+	    <h4>Week 10:</h4>
+            <b>Date:</b>31 Mar 2017<br>
+            <b>Total hours:</b> 9<br>
+            <b>Description of design efforts:</b><br>
+            With hardware prototyping coming to a closure, I set out to work on Bluetooth connection this week. The phone app will communicate to te microcontroller via Bluetooth to transmit data wirelessly. Android Studio has built in Bluetooth API so I took the time to familiarize myself with it and write some test code to be used on our initial pairing of the phone and microcontroller. The Bluetooth API works in that a Bluetooth reciever can scan for other Bluetooth devices within its proximity. After two devices have made communication, a pairing of them will be requested as a sort of secuirty clearence and paperwork. These pairings can then be accessed at a later time to communicate with devices without having to set up connection again. Below is some sample code that will be used to detect the Bluetooth module in the microcontroller to properly set up communication when hardware demoing occurs.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/ColeImg/BluetoothScanning.png"> 
+            </div><br>
+            <br>
+
+	    <h4>Week 13:</h4>
+            <b>Date:</b>07 April 2017<br>
+            <b>Total hours:</b> 12<br>
+            <b>Description of design efforts:</b><br>
+            This week I spent some time working on the microcontroller code and the phone app code. Brian and I worked together on the microcontroller to make the necessary functions to quickly decode note information to light up the LEDs on the neck of the guitar. In order to test our design we programmed some test notes to be displayed in progression. To simulate the effect of seeing the user play the note properly, we added a push button that signaled to move on to the next note. We were successfully able to display unique notes and iterate through them via push button. This now only needs to be applied to incoming song data instead of hard-coded notes in order to globally work amongst all LED strips in the frets. 
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/ColeImg/AndroidCreateSong.png"> 
+            </div><br>
+	    I also worked a function on the phone app that allows users to make their own songs by specifying sequences of string and fret combinations. This not only will be useful for real life use, but also will serve as a way for us to quickly create so encodings without having to a large amount of binary to decimal conversations manually. 
+            <br>
+
+	    <h4>Week 14:</h4>
+            <b>Date:</b>14 April 2017<br>
+            <b>Total hours:</b> 6<br>
+            <b>Description of design efforts:</b><br>
+            This week Brian and I worked and Bluetooth some more because it is crucial to our project specific success criteria.  We sifted through the harmony library trying to find the proper channels to program the Bluetooth module, but the built in functionality is not compatible with our device. We then moved on track to figure out how to test our device, but it will require a breakout board for quick prototyping. 
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/ColeImg/BluetoothWrite.png"> 
+            </div><br>
+	    I then set out to improve upon the app's Bluetooth code as we prepare for testing of the guitar side device. I did a great deal of reading about server and client connections between devices. The server and client devices connect to each other through what is called a Bluetooth socket. The server device opens up a socket as sort of a "docking station" while the client consumes the socket to open a line of communication. At that point, Android's built in BluetoothSocket, InputStream, and OutputStream classes have a majority of the necessary communication functions built in. I took the time to familiarize myself with the classes and have general code in place for testing once our Bluetooth hardware is up and running. 
+            <br>
+
+ 	    <h4>Week 15:</h4>
+            <b>Date:</b>21 April 2017<br>
+            <b>Total hours:</b> 8<br>
+            <b>Description of design efforts:</b><br>
+            After receiving all the finalized components that we ordered, we got right to soldering our PCB. Because my main focus has been on the software side, I soldered on our surface mount LEDs in order to test and demo the microcontroller's ability to display note information as a binary matrix. It was the first time I had soldered a surface mounted component onto a PCB, so I enlisted the help of Matt, my team's adviser. He walked me through the common techniques of applying solder first then placing the component and the opposite in which the component is placed first then pre-melted solder is applied. I took the route of placing the component first. It was a lot trickier than I had anticipated but after some practice I got into a rhythm and it felt comfortable. We were able to light the LEDs on the board after they were on the board. 
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/ColeImg/PCB.jpeg"> 
+            </div><br>
+	    This week the group was held back by some debugging issues that consumed a large portion of our time. The microcontroller had a slew of errors when trying to program it on the PCB. From powering issues to the inability to recognize the device, programming the microcontroller was not working. After every test we ran came back inconclusive, we decided to start fresh with a new board and new microcontroller to see if the issue was localized in those hardware components specifically. Joe helped us solder the new microcontroller on the new board quickly to help us reduce downtime. When the new hardware was finished, we were able to program the microcontroller after a small amount of fiddling with the wires. We adjourned there with the anticipation of making more substantial progress this weekend. 
+            <br>
+
+	    <h4>Week 16:</h4>
+            <b>Date:</b>28 April 2017<br>
+            <b>Total hours:</b> 40<br>
+            <b>Description of design efforts:</b><br>
+            I don't have time to explain why I don't have time to explain everything I did this past week (Destiny reference). This week was a frantic dash to try to get everything done on time. After spending countless hours understanding our Bluetooth module, we ended up scrapping that device for the RN4020. Then after spending some more time learning how to talk to the RN4020 we decided we needed to cut our Bluetooth entirely for the spark challenge. So then Brian and I got to cleaning up the microcontroller code. There were some issues where if the low E string had an LED lit and then another fret was getting a light up signal, then the whole row of the new fret would light up. We band-aided this by just changing the order in which we told LEDs to light up, but in order to fix things entirely we set out to restructure the data structures uses and effective "classes" (no real classes were used because the micro was being coded in a non-OOP language - C). We couldn't test the new code intermediately because Austin and Jen were chugging away trying to get all the PCBs connected. So once we had all the PCBs connected and tried our new and improved code, it didn't light up. Unfortunately for us we were unable to get any debugging interface to work with our microcontroller so we ended up having to scrap the new and "improved" code in order to have a working product for spark challenge because there was to much to test without any good ways of testing it. Something that is only somewhat a sad story this week is I wrote a rolling averager data structure that would take a rolling average of a digital input pin's status over the course of some time in order to smooth out our strum detection. This was important because the strum detetction was detecting vibration so there would be many high peaks in a given time frame that in sum indicated a strum. It was written to be as time effecient as possible in order to not slow down the user's interaction with the system. I don't have any pictures because taking pictures wasn't that high on my priority list this week. Sorry for the bluntness, it's almost midnight and I didn't sleep at all last night... I am ready for bed. God Bless America.
+            <br>
+            <div align="center">
+            	<img style="image-orientation: 90deg;" width="75%" src="Team/progress/img/AustinImg/guitutar_LED.png"> 
+            </div><br>          
         </div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
